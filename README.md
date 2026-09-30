@@ -35,3 +35,6 @@ TwilitMusic is an open-source, modern Android music player featuring a "twilight
 - Coil
 - Kotlinx Coroutines
 - Reorderable (org.burnoutcrew)
+
+## Acknowledgements
+- Audio tracks in DemoMusicSource are provided by [SoundHelix.com](https://www.soundhelix.com/audio-examples).

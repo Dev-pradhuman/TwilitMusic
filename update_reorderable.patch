@@ -1,0 +1,79 @@
+--- app/src/main/java/com/twilitmusic/app/ui/NowPlayingScreen.kt
++++ app/src/main/java/com/twilitmusic/app/ui/NowPlayingScreen.kt
+@@ -29,10 +29,10 @@
+ import coil.compose.AsyncImage
+ import com.twilitmusic.app.domain.model.Track
+-import org.burnoutcrew.reorderable.ReorderableItem
+-import org.burnoutcrew.reorderable.detectReorderAfterLongPress
+-import org.burnoutcrew.reorderable.rememberReorderableLazyListState
+-import org.burnoutcrew.reorderable.reorderable
++import sh.calvin.reorderable.ReorderableItem
++import sh.calvin.reorderable.rememberReorderableLazyListState
++import androidx.compose.foundation.lazy.rememberLazyListState
++import androidx.compose.runtime.LaunchedEffect
+ 
+ @OptIn(ExperimentalMaterial3Api::class)
+@@ -107,17 +107,24 @@
+     val localQueue = remember { mutableStateListOf<Track>() }
+-    
++
+     LaunchedEffect(queue) {
+         localQueue.clear()
+         localQueue.addAll(queue)
+     }
+ 
+-    val state = rememberReorderableLazyListState(onMove = { from, to ->
++    var dragStartIndex by remember { mutableStateOf(-1) }
++    var dragEndIndex by remember { mutableStateOf(-1) }
++
++    val lazyListState = rememberLazyListState()
++    val state = rememberReorderableLazyListState(lazyListState) { from, to ->
+         val moved = localQueue.removeAt(from.index)
+         localQueue.add(to.index, moved)
+-    }, onDragEnd = { startIndex, endIndex ->
+-        viewModel.moveTrack(startIndex, endIndex)
+-    })
++        if (dragStartIndex == -1) dragStartIndex = from.index
++        dragEndIndex = to.index
++    }
+ 
+     Scaffold(
+         topBar = {
+@@ -164,16 +171,15 @@
+     ) { padding ->
+         LazyColumn(
+-            state = state.listState,
+-            contentPadding = padding,
+-            modifier = Modifier.reorderable(state)
++            state = lazyListState,
++            contentPadding = padding
+         ) {
+             items(localQueue.size, { it }) { index ->
+                 val track = localQueue[index]
+-                ReorderableItem(state, key = index) { isDragging ->
++                ReorderableItem(state, key = index) {
+                     Row(
+                         modifier = Modifier
+                             .fillMaxWidth()
+                             .clickable { viewModel.playQueue(localQueue, index) }
+                             .background(
+-                                if (isDragging) MaterialTheme.colorScheme.surfaceVariant
++                                if (isDragging) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface
+                             )
+                             .padding(16.dp),
+@@ -192,7 +198,13 @@
+                         Icon(
+                             imageVector = Icons.Default.DragHandle,
+                             contentDescription = null,
+-                            modifier = Modifier.detectReorderAfterLongPress(state)
++                            modifier = Modifier.longPressDraggableHandle(
++                                onDragStopped = {
++                                    if (dragStartIndex != -1 && dragEndIndex != -1 && dragStartIndex != dragEndIndex) {
++                                        viewModel.moveTrack(dragStartIndex, dragEndIndex)
++                                    }
++                                    dragStartIndex = -1
++                                    dragEndIndex = -1
++                                }
++                            )
+                         )
+                     }

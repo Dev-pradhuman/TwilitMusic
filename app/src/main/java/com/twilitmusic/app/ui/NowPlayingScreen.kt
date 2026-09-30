@@ -27,10 +27,9 @@ import androidx.compose.ui.res.stringResource
 import com.twilitmusic.app.R
 import coil.compose.AsyncImage
 import com.twilitmusic.app.domain.model.Track
-import org.burnoutcrew.reorderable.ReorderableItem
-import org.burnoutcrew.reorderable.detectReorderAfterLongPress
-import org.burnoutcrew.reorderable.rememberReorderableLazyListState
-import org.burnoutcrew.reorderable.reorderable
+import sh.calvin.reorderable.ReorderableItem
+import sh.calvin.reorderable.rememberReorderableLazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -139,16 +138,17 @@ fun QueueSheet(
         localQueue = queueFlow
     }
 
-    val state = rememberReorderableLazyListState(
-        onMove = { from, to ->
-            localQueue = localQueue.toMutableList().apply {
-                add(to.index, removeAt(from.index))
-            }
-        },
-        onDragEnd = { startIndex, endIndex ->
-            viewModel.moveTrack(startIndex, endIndex)
+    var dragStartIndex by remember { mutableStateOf(-1) }
+    var dragEndIndex by remember { mutableStateOf(-1) }
+
+    val lazyListState = rememberLazyListState()
+    val state = rememberReorderableLazyListState(lazyListState) { from, to ->
+        localQueue = localQueue.toMutableList().apply {
+            add(to.index, removeAt(from.index))
         }
-    )
+        if (dragStartIndex == -1) dragStartIndex = from.index
+        dragEndIndex = to.index
+    }
 
     Scaffold(
         topBar = {
@@ -163,9 +163,8 @@ fun QueueSheet(
         }
     ) { padding ->
         LazyColumn(
-            state = state.listState,
-            contentPadding = padding,
-            modifier = Modifier.reorderable(state)
+            state = lazyListState,
+            contentPadding = padding
         ) {
             items(localQueue.size, { it }) { index ->
                 val track = localQueue[index]
@@ -185,7 +184,15 @@ fun QueueSheet(
                         Icon(
                             imageVector = Icons.Default.DragHandle,
                             contentDescription = stringResource(R.string.drag),
-                            modifier = Modifier.detectReorderAfterLongPress(state)
+                            modifier = Modifier.longPressDraggableHandle(
+                                onDragStopped = {
+                                    if (dragStartIndex != -1 && dragEndIndex != -1 && dragStartIndex != dragEndIndex) {
+                                        viewModel.moveTrack(dragStartIndex, dragEndIndex)
+                                    }
+                                    dragStartIndex = -1
+                                    dragEndIndex = -1
+                                }
+                            )
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         AsyncImage(
