@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TwilitMusic</string>
+    <string name="featured">Featured</string>
+    <string name="new_tracks">New</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="queue">Queue</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="library">Library</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="repeat">Repeat</string>
+</resources>
