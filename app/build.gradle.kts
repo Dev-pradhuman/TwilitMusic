@@ -64,6 +64,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.extended)
     
     // Media3
     implementation(libs.media3.exoplayer)
@@ -84,6 +85,7 @@ dependencies {
 
     // Coroutines
     implementation(libs.coroutines.android)
+    implementation(libs.coroutines.guava)
 
     testImplementation(libs.junit)
     testImplementation(libs.coroutines.test)

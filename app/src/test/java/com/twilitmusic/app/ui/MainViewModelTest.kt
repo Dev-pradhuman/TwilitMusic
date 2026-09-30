@@ -13,23 +13,27 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.`when`
+import org.mockito.kotlin.mock
+import org.mockito.kotlin.whenever
 import org.mockito.Mockito.verify
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class MainViewModelTest {
 
     private val testDispatcher = StandardTestDispatcher()
-    private lateinit val mockMusicSource: MusicSource
-    private lateinit val mockMusicController: MusicController
-    private lateinit val viewModel: MainViewModel
+    private lateinit var mockMusicSource: MusicSource
+    private lateinit var mockMusicController: MusicController
+    private lateinit var viewModel: MainViewModel
 
     @Before
-    fun setup() {
+    fun setup() = runTest {
         Dispatchers.setMain(testDispatcher)
-        mockMusicSource = mock(MusicSource::class.java)
-        mockMusicController = mock(MusicController::class.java)
+        mockMusicSource = mock()
+        mockMusicController = mock()
+        
+        whenever(mockMusicSource.getFeaturedTracks()).thenReturn(emptyList())
+        whenever(mockMusicSource.getNewTracks()).thenReturn(emptyList())
+        
         viewModel = MainViewModel(mockMusicSource, mockMusicController)
     }
 
@@ -41,8 +45,8 @@ class MainViewModelTest {
     @Test
     fun loadHomeData_updatesUiState() = runTest(testDispatcher) {
         val tracks = listOf(Track("1", "A", "B", "C", "D"))
-        `when`(mockMusicSource.getFeaturedTracks()).thenReturn(tracks)
-        `when`(mockMusicSource.getNewTracks()).thenReturn(tracks)
+        whenever(mockMusicSource.getFeaturedTracks()).thenReturn(tracks)
+        whenever(mockMusicSource.getNewTracks()).thenReturn(tracks)
 
         // Initialize view model
         viewModel = MainViewModel(mockMusicSource, mockMusicController)
@@ -70,5 +74,12 @@ class MainViewModelTest {
     fun moveTrack_callsController() = runTest(testDispatcher) {
         viewModel.moveTrack(0, 2)
         verify(mockMusicController).moveTrack(0, 2)
+    }
+    
+    @Test
+    fun playQueue_callsController() = runTest(testDispatcher) {
+        val tracks = listOf(Track("1", "A", "B", "C", "D"))
+        viewModel.playQueue(tracks, 0)
+        verify(mockMusicController).playQueue(tracks, 0)
     }
 }

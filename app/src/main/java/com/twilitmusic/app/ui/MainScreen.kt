@@ -54,7 +54,7 @@ fun TwilitAppScreen(
                     NavigationBarItem(
                         selected = currentTab == 0,
                         onClick = { currentTab = 0 },
-                        icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
+                        icon = { Icon(Icons.Default.Home, contentDescription = stringResource(R.string.home)) },
                         label = { Text(stringResource(R.string.home)) }
                     )
                     NavigationBarItem(
@@ -190,7 +190,7 @@ fun MiniPlayer(
             IconButton(onClick = onPlayPause) {
                 Icon(
                     imageVector = if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
-                    contentDescription = if (isPlaying) "Pause" else "Play"
+                    contentDescription = if (isPlaying) stringResource(R.string.pause) else stringResource(R.string.play)
                 )
             }
         }
@@ -200,13 +200,13 @@ fun MiniPlayer(
 @Composable
 fun SearchScreenPlaceholder() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("Search (Placeholder)")
+        Text(stringResource(R.string.search_placeholder))
     }
 }
 
 @Composable
 fun LibraryScreenPlaceholder() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("Library (Placeholder)")
+        Text(stringResource(R.string.library_placeholder))
     }
 }

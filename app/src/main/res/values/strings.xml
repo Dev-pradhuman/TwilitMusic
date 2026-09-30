@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="search_placeholder">Search (Placeholder)</string>
+    <string name="library_placeholder">Library (Placeholder)</string>
+    <string name="remove">Remove</string>
+    <string name="close">Close</string>
+    <string name="drag">Drag</string>
+    <string name="play_pause">Play/Pause</string>
     <string name="app_name">TwilitMusic</string>
     <string name="featured">Featured</string>
     <string name="new_tracks">New</string>

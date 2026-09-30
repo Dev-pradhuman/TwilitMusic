@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -56,7 +57,7 @@ fun NowPlayingScreen(
                     title = { Text(stringResource(R.string.now_playing), style = MaterialTheme.typography.labelSmall) },
                     navigationIcon = {
                         IconButton(onClick = onClose) {
-                            Icon(Icons.Default.KeyboardArrowDown, "Close")
+                            Icon(Icons.Default.KeyboardArrowDown, stringResource(R.string.close))
                         }
                     },
                     actions = {
@@ -109,7 +110,7 @@ fun NowPlayingScreen(
                     FloatingActionButton(onClick = onPlayPause) {
                         Icon(
                             if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
-                            "Play/Pause",
+                            stringResource(R.string.play_pause),
                             modifier = Modifier.size(32.dp)
                         )
                     }
@@ -129,12 +130,25 @@ fun QueueSheet(
     viewModel: MainViewModel,
     onClose: () -> Unit
 ) {
-    val queue by viewModel.musicController.queue.collectAsState()
+    val queueFlow by viewModel.musicController.queue.collectAsState()
     val currentTrack by viewModel.musicController.currentTrack.collectAsState()
 
-    val state = rememberReorderableLazyListState(onMove = { from, to ->
-        viewModel.moveTrack(from.index, to.index)
-    })
+    var localQueue by remember { mutableStateOf(queueFlow) }
+
+    LaunchedEffect(queueFlow) {
+        localQueue = queueFlow
+    }
+
+    val state = rememberReorderableLazyListState(
+        onMove = { from, to ->
+            localQueue = localQueue.toMutableList().apply {
+                add(to.index, removeAt(from.index))
+            }
+        },
+        onDragEnd = { startIndex, endIndex ->
+            viewModel.moveTrack(startIndex, endIndex)
+        }
+    )
 
     Scaffold(
         topBar = {
@@ -142,7 +156,7 @@ fun QueueSheet(
                 title = { Text(stringResource(R.string.queue)) },
                 navigationIcon = {
                     IconButton(onClick = onClose) {
-                        Icon(Icons.Default.KeyboardArrowDown, "Close")
+                        Icon(Icons.Default.KeyboardArrowDown, stringResource(R.string.close))
                     }
                 }
             )
@@ -153,13 +167,13 @@ fun QueueSheet(
             contentPadding = padding,
             modifier = Modifier.reorderable(state)
         ) {
-            items(queue.size, { it }) { index ->
-                val track = queue[index]
+            items(localQueue.size, { it }) { index ->
+                val track = localQueue[index]
                 ReorderableItem(state, key = index) { isDragging ->
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clickable { viewModel.playQueue(queue, index) }
+                            .clickable { viewModel.playQueue(localQueue, index) }
                             .background(
                                 if (isDragging) MaterialTheme.colorScheme.surfaceVariant
                                 else if (track.id == currentTrack?.id) MaterialTheme.colorScheme.primaryContainer
@@ -170,7 +184,7 @@ fun QueueSheet(
                     ) {
                         Icon(
                             imageVector = Icons.Default.DragHandle,
-                            contentDescription = "Drag",
+                            contentDescription = stringResource(R.string.drag),
                             modifier = Modifier.detectReorderAfterLongPress(state)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
@@ -187,7 +201,7 @@ fun QueueSheet(
                             Text(track.artist, style = MaterialTheme.typography.labelSmall)
                         }
                         IconButton(onClick = { viewModel.removeTrack(index) }) {
-                            Icon(Icons.Default.Close, "Remove")
+                            Icon(Icons.Default.Close, stringResource(R.string.remove))
                         }
                     }
                 }

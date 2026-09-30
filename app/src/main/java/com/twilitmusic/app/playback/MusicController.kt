@@ -56,6 +56,7 @@ class MusicController @Inject constructor(
         _currentTrack.value = _queue.value.find { it.id == mediaItem.mediaId }
     }
     
+    @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
     private fun updateQueue() {
         val controller = mediaController ?: return
         val newQueue = mutableListOf<Track>()
