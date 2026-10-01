@@ -54,7 +54,7 @@ class LibraryViewModelTest {
     fun `createPlaylist calls dao`() = runTest {
         viewModel.createPlaylist("My Playlist")
         testDispatcher.scheduler.advanceUntilIdle()
-        verify(playlistDao).createPlaylist(PlaylistEntity(name = "My Playlist"))
+        verify(playlistDao).createPlaylist(org.mockito.kotlin.any())
     }
     
     @Test

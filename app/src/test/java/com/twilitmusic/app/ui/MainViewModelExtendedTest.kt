@@ -41,7 +41,7 @@ class MainViewModelExtendedTest {
     private val currentTrackFlow = MutableStateFlow<Track?>(mockTrack)
 
     @Before
-    fun setup() {
+    fun setup() = kotlinx.coroutines.test.runTest {
         Dispatchers.setMain(testDispatcher)
         application = mock()
         prefs = mock()
@@ -65,6 +65,8 @@ class MainViewModelExtendedTest {
         whenever(musicController.repeatMode).thenReturn(MutableStateFlow(0))
         
         whenever(libraryRepository.isLiked(any())).thenReturn(MutableStateFlow(false))
+        whenever(musicSource.getFeaturedTracks()).thenReturn(emptyList())
+        whenever(musicSource.getNewTracks()).thenReturn(emptyList())
         
         viewModel = MainViewModel(application, musicSource, musicController, libraryRepository)
     }
