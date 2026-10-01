@@ -38,3 +38,10 @@ TwilitMusic is an open-source, modern Android music player featuring a "twilight
 
 ## Acknowledgements
 - Audio tracks in DemoMusicSource are provided by [SoundHelix.com](https://www.soundhelix.com/audio-examples).
+
+## Phase 2
+- Implemented working seek bar.
+- Added Shuffle and Repeat modes.
+- Queue persistence across app restarts.
+- Room database added for library features.
+- Search and Library screens implemented with real data.
