@@ -10,13 +10,12 @@ if (localPropertiesFile.exists()) {
 val jamendoClientId = localProperties.getProperty("JAMENDO_CLIENT_ID")?.replace("\"", "") ?: ""
 
 plugins {
+    alias(libs.plugins.composeCompiler)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("org.jetbrains.kotlin.plugin.serialization")
-    alias(libs.plugins.kapt)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
-}
+    alias(libs.plugins.kotlinxSerialization)
+        alias(libs.plugins.ksp)
+    }
 
 kotlin {
     jvmToolchain(17)
@@ -68,10 +67,7 @@ android {
         compose = true
         buildConfig = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
-    }
-    packaging {
+        packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
@@ -105,10 +101,7 @@ dependencies {
     implementation(libs.media3.common)
 
     // Hilt
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
-
+            
     // Navigation Compose
     implementation(libs.androidx.navigation.compose)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
@@ -120,6 +113,7 @@ dependencies {
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.guava)
 
+    implementation(libs.koin.android)
     testImplementation(libs.junit)
     testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
     testImplementation("org.robolectric:robolectric:4.11.1")
@@ -136,3 +130,4 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 }
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }
+

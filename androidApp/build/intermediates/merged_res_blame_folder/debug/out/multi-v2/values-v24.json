@@ -1,16 +1,33 @@
 {
     "logs": [
         {
-            "outputFile": "com.twilitmusic.app.androidApp-mergeDebugResources-67:/values-v24/values-v24.xml",
+            "outputFile": "com.twilitmusic.app.androidApp-mergeDebugResources-71:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/pradhuman/.gradle/caches/transforms-4/b783fe04a7505d3d2316247d14cccdea/transformed/media-1.6.0/res/values-v24/values-v24.xml",
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/bfc66e8f82998dc12cea97d488bfcbf3/transformed/appcompat-1.7.0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/8f9d90f1304513f5c5b99d489ea11100/transformed/media3-session-1.4.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,121,182,248",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "116,177,243,310"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "347,413,474,540",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "408,469,535,602"
                     }
                 }
             ]

@@ -20,6 +20,11 @@
     "sourceSetName": "commonMain"
   },
   {
+    "moduleId": "module org.jetbrains.compose.material:material-icons-extended:1.7.0",
+    "file": "/home/pradhuman/projects/twilitmusic/shared/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.compose.material-material-icons-extended-1.7.0-commonMain-m2wuDA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
     "moduleId": "module org.jetbrains.compose.ui:ui:1.7.0",
     "file": "/home/pradhuman/projects/twilitmusic/shared/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.compose.ui-ui-1.7.0-commonMain-byxhLA.klib",
     "sourceSetName": "commonMain"

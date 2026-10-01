@@ -1,26 +1,26 @@
 [
     {
-        "merged": "com.twilitmusic.app.shared-merged_res-63:/animator/fragment_open_enter.xml",
-        "source": "com.twilitmusic.app.shared-fragment-1.8.3-52:/animator/fragment_open_enter.xml"
+        "merged": "com.twilitmusic.app.shared-merged_res-64:/animator/fragment_fade_exit.xml",
+        "source": "com.twilitmusic.app.shared-fragment-1.8.3-56:/animator/fragment_fade_exit.xml"
     },
     {
-        "merged": "com.twilitmusic.app.shared-merged_res-63:/animator/fragment_close_exit.xml",
-        "source": "com.twilitmusic.app.shared-fragment-1.8.3-52:/animator/fragment_close_exit.xml"
+        "merged": "com.twilitmusic.app.shared-merged_res-64:/animator/fragment_open_exit.xml",
+        "source": "com.twilitmusic.app.shared-fragment-1.8.3-56:/animator/fragment_open_exit.xml"
     },
     {
-        "merged": "com.twilitmusic.app.shared-merged_res-63:/animator/fragment_fade_exit.xml",
-        "source": "com.twilitmusic.app.shared-fragment-1.8.3-52:/animator/fragment_fade_exit.xml"
+        "merged": "com.twilitmusic.app.shared-merged_res-64:/animator/fragment_close_exit.xml",
+        "source": "com.twilitmusic.app.shared-fragment-1.8.3-56:/animator/fragment_close_exit.xml"
     },
     {
-        "merged": "com.twilitmusic.app.shared-merged_res-63:/animator/fragment_fade_enter.xml",
-        "source": "com.twilitmusic.app.shared-fragment-1.8.3-52:/animator/fragment_fade_enter.xml"
+        "merged": "com.twilitmusic.app.shared-merged_res-64:/animator/fragment_fade_enter.xml",
+        "source": "com.twilitmusic.app.shared-fragment-1.8.3-56:/animator/fragment_fade_enter.xml"
     },
     {
-        "merged": "com.twilitmusic.app.shared-merged_res-63:/animator/fragment_close_enter.xml",
-        "source": "com.twilitmusic.app.shared-fragment-1.8.3-52:/animator/fragment_close_enter.xml"
+        "merged": "com.twilitmusic.app.shared-merged_res-64:/animator/fragment_close_enter.xml",
+        "source": "com.twilitmusic.app.shared-fragment-1.8.3-56:/animator/fragment_close_enter.xml"
     },
     {
-        "merged": "com.twilitmusic.app.shared-merged_res-63:/animator/fragment_open_exit.xml",
-        "source": "com.twilitmusic.app.shared-fragment-1.8.3-52:/animator/fragment_open_exit.xml"
+        "merged": "com.twilitmusic.app.shared-merged_res-64:/animator/fragment_open_enter.xml",
+        "source": "com.twilitmusic.app.shared-fragment-1.8.3-56:/animator/fragment_open_enter.xml"
     }
 ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.twilitmusic.app.shared-merged_res-63:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.twilitmusic.app.shared-merged_res-64:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/pradhuman/.gradle/caches/transforms-4/f778031aa115e6c7433a6065588682a7/transformed/appcompat-1.7.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/bfc66e8f82998dc12cea97d488bfcbf3/transformed/appcompat-1.7.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "com.twilitmusic.app.shared-mergeReleaseResources-61:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.twilitmusic.app.shared-mergeReleaseResources-62:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/pradhuman/.gradle/caches/transforms-4/f778031aa115e6c7433a6065588682a7/transformed/appcompat-1.7.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/bfc66e8f82998dc12cea97d488bfcbf3/transformed/appcompat-1.7.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

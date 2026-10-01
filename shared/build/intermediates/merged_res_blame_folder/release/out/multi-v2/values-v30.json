@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.twilitmusic.app.shared-merged_res-63:/values-v30/values-v30.xml",
+            "outputFile": "com.twilitmusic.app.shared-mergeReleaseResources-62:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "/home/pradhuman/.gradle/caches/transforms-4/dc8d20285bf22899ac5e24ada2146244/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/ef7925313ea31d856b9d3702e6f1c3aa/transformed/material3-release/res/values-v30/values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "com.twilitmusic.app.shared-mergeReleaseResources-61:/values-v30/values-v30.xml",
+            "outputFile": "com.twilitmusic.app.shared-merged_res-64:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "/home/pradhuman/.gradle/caches/transforms-4/dc8d20285bf22899ac5e24ada2146244/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/ef7925313ea31d856b9d3702e6f1c3aa/transformed/material3-release/res/values-v30/values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

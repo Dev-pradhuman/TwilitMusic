@@ -21,7 +21,33 @@
     <item quantity="many">Перемотать на %d секунд назад</item>
     <item quantity="other">Перемотать на %d секунды назад</item>
   </plurals>
-    <string name="authentication_required">Требуется аутентификация</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Перейти на главный экран"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Перейти вверх"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Ещё"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Готово"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Показать все"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Выберите приложение"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ВЫКЛ"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ВКЛ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Ввод"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"Пробел"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Меню +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Введите запрос"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Удалить запрос"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Поисковый запрос"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Поиск"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Отправить запрос"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Голосовой поиск"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Поделиться с помощью"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Поделиться с помощью <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Свернуть"</string>
     <string msgid="881409763997275156" name="call_notification_answer_action">"Ответить"</string>
     <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Видео"</string>
     <string msgid="3229508546291798546" name="call_notification_decline_action">"Отклонить"</string>
@@ -35,6 +61,23 @@
     <string name="default_notification_channel_name">Играет сейчас</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"Всплывающее окно"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"Раскрывающееся меню"</string>
+    <string name="error_message_authentication_expired">Чтобы использовать это приложение, войдите в аккаунт.</string>
+    <string name="error_message_bad_value">Введены неверные данные.</string>
+    <string name="error_message_concurrent_stream_limit">Слишком много устройств, на которых воспроизводится аудио.</string>
+    <string name="error_message_content_already_playing">Этот контент уже воспроизводится.</string>
+    <string name="error_message_disconnected">Нет подключения к приложению для мультимедиа.</string>
+    <string name="error_message_end_of_playlist">В очереди воспроизведения нет других файлов.</string>
+    <string name="error_message_fallback">Произошла ошибка. Повторите попытку позже.</string>
+    <string name="error_message_info_cancelled">Не удалось выполнить действие. Повторите попытку.</string>
+    <string name="error_message_invalid_state">Сейчас это действие недоступно.</string>
+    <string name="error_message_io">При вводе или выводе данных произошла ошибка.</string>
+    <string name="error_message_not_available_in_region">Контент недоступен в вашем регионе.</string>
+    <string name="error_message_not_supported">Действие недоступно в этом приложении.</string>
+    <string name="error_message_parental_control_restricted">Контент заблокирован.</string>
+    <string name="error_message_permission_denied">Доступ запрещен.</string>
+    <string name="error_message_premium_account_required">Требуется премиум-аккаунт.</string>
+    <string name="error_message_setup_required">Требуется настройка.</string>
+    <string name="error_message_skip_limit_reached">Пропускать треки больше нельзя.</string>
     <string name="exo_controls_cc_disabled_description">Включить субтитры</string>
     <string name="exo_controls_cc_enabled_description">Выключить субтитры</string>
     <string name="exo_controls_fastforward_description">Перемотать вперед</string>
@@ -79,13 +122,12 @@
     <string name="exo_track_selection_auto">Авто</string>
     <string name="exo_track_selection_none">Нет</string>
     <string name="exo_track_selection_title_audio">Аудио</string>
-    <string name="exo_track_selection_title_text">Текст</string>
-    <string name="exo_track_selection_title_video">Видео</string>
     <string name="exo_track_stereo">Стерео</string>
     <string name="exo_track_surround">Объемный звук</string>
     <string name="exo_track_surround_5_point_1">Система объемного звука 5.1</string>
     <string name="exo_track_surround_7_point_1">Система объемного звука 7.1</string>
     <string name="exo_track_unknown">Неизвестный трек</string>
+    <string name="exo_track_unknown_name">Неизвестно (%1$s)</string>
     <string msgid="6827826412747255547" name="in_progress">"Выполняется"</string>
     <string msgid="7933458017204019916" name="indeterminate">"Отмечено частично"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Свернуть нижний экран"</string>
@@ -127,6 +169,7 @@
     <string msgid="7617233117134790350" name="m3c_dialog">"Диалоговое окно"</string>
     <string msgid="3177828188723359358" name="m3c_dropdown_menu_collapsed">"Свернуто"</string>
     <string msgid="2360841780724299882" name="m3c_dropdown_menu_expanded">"Развернуто"</string>
+    <string msgid="8687821690726149911" name="m3c_dropdown_menu_toggle">"Показать или скрыть раскрывающееся меню"</string>
     <string msgid="6152806324422087846" name="m3c_search_bar_search">"Строка поиска"</string>
     <string msgid="6152755701819882931" name="m3c_snackbar_dismiss">"Закрыть"</string>
     <string msgid="7655536806087401899" name="m3c_suggestions_available">"Подсказки показаны ниже"</string>
@@ -154,6 +197,7 @@
     <string msgid="6610465462668679431" name="not_selected">"Не выбрано"</string>
     <string msgid="5941395253238309765" name="range_end">"Конец диапазона"</string>
     <string msgid="7097486360902471446" name="range_start">"Начало диапазона"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Поиск"</string>
     <string msgid="6043586758067023" name="selected">"Выбрано"</string>
     <string msgid="4139871816613051306" name="state_empty">"Пусто"</string>
     <string msgid="5834637030682409883" name="state_off">"Отключено"</string>

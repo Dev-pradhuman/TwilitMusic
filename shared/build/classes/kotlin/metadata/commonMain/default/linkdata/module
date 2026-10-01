@@ -1,0 +1,2 @@
+
+<shared_commonMain>:com.twilitmusic.app.data.local:"com.twilitmusic.app.data.local.dao:%com.twilitmusic.app.data.local.entity:com.twilitmusic.app.data.remote:#com.twilitmusic.app.data.repository:com.twilitmusic.app.di:com.twilitmusic.app.domain: com.twilitmusic.app.domain.model:%com.twilitmusic.app.domain.repository:com.twilitmusic.app.playback:com.twilitmusic.app.ui:com.twilitmusic.app.ui.theme:&twilitmusic.shared.generated.resources
