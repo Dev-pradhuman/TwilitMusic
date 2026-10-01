@@ -1,6 +1,15 @@
 package com.twilitmusic.app.ui
 
 import androidx.lifecycle.ViewModel
+import android.app.Application
+import android.content.Context
+import androidx.media3.common.MediaItem
+import com.twilitmusic.app.domain.repository.LibraryRepository
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import androidx.lifecycle.viewModelScope
 import com.twilitmusic.app.domain.model.Track
 import com.twilitmusic.app.domain.repository.MusicSource
@@ -21,12 +30,26 @@ data class MainUiState(
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
+    private val application: Application,
     private val musicSource: MusicSource,
-    val musicController: MusicController
+    val musicController: MusicController,
+    private val libraryRepository: LibraryRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(MainUiState())
     val uiState: StateFlow<MainUiState> = _uiState.asStateFlow()
+    
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val isCurrentTrackLiked = musicController.currentTrack.flatMapLatest { track ->
+        if (track == null) flowOf(false) else libraryRepository.isLiked(track.id)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+    
+    fun toggleLike() {
+        val track = musicController.currentTrack.value ?: return
+        viewModelScope.launch {
+            libraryRepository.toggleLike(track, !isCurrentTrackLiked.value)
+        }
+    }
 
     init {
         viewModelScope.launch {

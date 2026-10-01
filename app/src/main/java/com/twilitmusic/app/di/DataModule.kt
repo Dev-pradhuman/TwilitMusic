@@ -1,6 +1,8 @@
 package com.twilitmusic.app.di
 
 import com.twilitmusic.app.data.repository.DemoMusicSource
+import com.twilitmusic.app.data.repository.LibraryRepositoryImpl
+import com.twilitmusic.app.domain.repository.LibraryRepository
 import com.twilitmusic.app.domain.repository.MusicSource
 import dagger.Binds
 import dagger.Module
@@ -14,4 +16,9 @@ abstract class DataModule {
     abstract fun bindMusicSource(
         demoMusicSource: DemoMusicSource
     ): MusicSource
+
+    @Binds
+    abstract fun bindLibraryRepository(
+        libraryRepositoryImpl: LibraryRepositoryImpl
+    ): LibraryRepository
 }

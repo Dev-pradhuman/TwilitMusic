@@ -23,6 +23,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.foundation.layout.Box
 import com.twilitmusic.app.R
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
@@ -35,6 +37,8 @@ fun TwilitAppScreen(
     var currentTab by remember { mutableStateOf(0) }
     val uiState by viewModel.uiState.collectAsState()
     val isPlaying by viewModel.musicController.isPlaying.collectAsState()
+    val position by viewModel.musicController.position.collectAsState()
+    val duration by viewModel.musicController.duration.collectAsState()
     val currentTrack by viewModel.musicController.currentTrack.collectAsState()
     
     var showNowPlaying by remember { mutableStateOf(false) }
@@ -46,6 +50,7 @@ fun TwilitAppScreen(
                     MiniPlayer(
                         track = currentTrack!!,
                         isPlaying = isPlaying,
+                        progress = if (duration > 0) position.toFloat() / duration.toFloat() else 0f,
                         onPlayPause = viewModel::playPause,
                         onClick = { showNowPlaying = true }
                     )
@@ -76,8 +81,8 @@ fun TwilitAppScreen(
         Box(modifier = Modifier.padding(paddingValues)) {
             when (currentTab) {
                 0 -> HomeScreen(uiState, onPlayTrack = viewModel::playTrack)
-                1 -> SearchScreenPlaceholder()
-                2 -> LibraryScreenPlaceholder()
+                1 -> SearchScreen(viewModel, onTrackClick = { viewModel.playTrack(it) })
+                2 -> LibraryScreen(onTrackClick = { viewModel.playTrack(it) })
             }
         }
     }
@@ -162,6 +167,7 @@ fun TrackItem(track: Track, onClick: () -> Unit) {
 fun MiniPlayer(
     track: Track,
     isPlaying: Boolean,
+    progress: Float,
     onPlayPause: () -> Unit,
     onClick: () -> Unit
 ) {
@@ -169,10 +175,11 @@ fun MiniPlayer(
         color = MaterialTheme.colorScheme.surfaceVariant,
         modifier = Modifier.clickable(onClick = onClick)
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
+        Box(modifier = Modifier.fillMaxWidth()) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
@@ -194,19 +201,15 @@ fun MiniPlayer(
                 )
             }
         }
+        LinearProgressIndicator(
+            progress = { progress },
+            modifier = Modifier.fillMaxWidth().align(Alignment.BottomCenter),
+            trackColor = androidx.compose.ui.graphics.Color.Transparent
+        )
     }
+}
 }
 
-@Composable
-fun SearchScreenPlaceholder() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(stringResource(R.string.search_placeholder))
-    }
-}
 
-@Composable
-fun LibraryScreenPlaceholder() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(stringResource(R.string.library_placeholder))
-    }
-}
+
+

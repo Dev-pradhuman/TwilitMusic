@@ -8,6 +8,7 @@ import androidx.media3.common.Player
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.twilitmusic.app.domain.model.Track
+import com.twilitmusic.app.domain.repository.LibraryRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,10 +16,15 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.guava.await
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
 
 @Singleton
 class MusicController @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val libraryRepository: LibraryRepository
 ) {
     private var mediaController: MediaController? = null
     
@@ -31,19 +37,60 @@ class MusicController @Inject constructor(
     private val _queue = MutableStateFlow<List<Track>>(emptyList())
     val queue: StateFlow<List<Track>> = _queue.asStateFlow()
 
+    private val _position = MutableStateFlow(0L)
+    val position: StateFlow<Long> = _position.asStateFlow()
+
+    private val _duration = MutableStateFlow(0L)
+    val duration: StateFlow<Long> = _duration.asStateFlow()
+
+    private val _bufferedPosition = MutableStateFlow(0L)
+    val bufferedPosition: StateFlow<Long> = _bufferedPosition.asStateFlow()
+
+    private val _shuffleModeEnabled = MutableStateFlow(false)
+    val shuffleModeEnabled: StateFlow<Boolean> = _shuffleModeEnabled.asStateFlow()
+
+    private val _repeatMode = MutableStateFlow(Player.REPEAT_MODE_OFF)
+    val repeatMode: StateFlow<Int> = _repeatMode.asStateFlow()
+
     suspend fun init() {
         if (mediaController != null) return
         val sessionToken = SessionToken(context, ComponentName(context, MusicService::class.java))
         mediaController = MediaController.Builder(context, sessionToken).buildAsync().await()
+        CoroutineScope(Dispatchers.Main).launch {
+            while (true) {
+                if (_isPlaying.value) {
+                    mediaController?.let {
+                        _position.value = it.currentPosition
+                        _duration.value = it.duration.coerceAtLeast(0L)
+                        _bufferedPosition.value = it.bufferedPosition
+                    }
+                }
+                delay(500)
+            }
+        }
         mediaController?.addListener(object : Player.Listener {
             override fun onIsPlayingChanged(isPlaying: Boolean) {
                 _isPlaying.value = isPlaying
             }
             override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
                 updateCurrentTrack(mediaItem)
+                mediaItem?.let {
+                    CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
+                        _queue.value.find { track -> track.id == it.mediaId }?.let { track ->
+                            libraryRepository.addPlayHistory(track)
+                        }
+                    }
+                }
             }
             override fun onTimelineChanged(timeline: androidx.media3.common.Timeline, reason: Int) {
                 updateQueue()
+            }
+            override fun onShuffleModeEnabledChanged(shuffleModeEnabled: Boolean) {
+                _shuffleModeEnabled.value = shuffleModeEnabled
+                updateQueue()
+            }
+            override fun onRepeatModeChanged(repeatMode: Int) {
+                _repeatMode.value = repeatMode
             }
         })
     }
@@ -79,6 +126,17 @@ class MusicController @Inject constructor(
         }
         _queue.value = newQueue
         updateCurrentTrack(controller.currentMediaItem)
+        saveQueueState()
+    }
+    
+    private fun saveQueueState() {
+        val prefs = context.getSharedPreferences("music_prefs", android.content.Context.MODE_PRIVATE)
+        val trackIds = _queue.value.joinToString(",") { it.id }
+        val index = mediaController?.currentMediaItemIndex ?: 0
+        prefs.edit()
+            .putString("saved_queue", trackIds)
+            .putInt("saved_index", index)
+            .apply()
     }
 
     fun playTrack(track: Track) {
@@ -118,6 +176,26 @@ class MusicController @Inject constructor(
         controller.prepare()
         controller.play()
     }
+
+    fun setQueueWithoutPlaying(tracks: List<Track>, startIndex: Int = 0) {
+        val controller = mediaController ?: return
+        val items = tracks.map { track ->
+            MediaItem.Builder()
+                .setMediaId(track.id)
+                .setUri(track.sourceUrl)
+                .setMediaMetadata(
+                    MediaMetadata.Builder()
+                        .setTitle(track.title)
+                        .setArtist(track.artist)
+                        .setArtworkUri(android.net.Uri.parse(track.artUrl))
+                        .build()
+                )
+                .build()
+        }
+        controller.setMediaItems(items, startIndex, 0L)
+        controller.prepare()
+        // Do not play automatically
+    }
     
     fun playPause() {
         val controller = mediaController ?: return
@@ -142,5 +220,23 @@ class MusicController @Inject constructor(
     
     fun moveTrack(fromIndex: Int, toIndex: Int) {
         mediaController?.moveMediaItem(fromIndex, toIndex)
+    }
+
+    fun seekTo(positionMs: Long) {
+        mediaController?.seekTo(positionMs)
+    }
+
+    fun toggleShuffle() {
+        val controller = mediaController ?: return
+        controller.shuffleModeEnabled = !controller.shuffleModeEnabled
+    }
+
+    fun cycleRepeatMode() {
+        val controller = mediaController ?: return
+        controller.repeatMode = when (controller.repeatMode) {
+            Player.REPEAT_MODE_OFF -> Player.REPEAT_MODE_ALL
+            Player.REPEAT_MODE_ALL -> Player.REPEAT_MODE_ONE
+            else -> Player.REPEAT_MODE_OFF
+        }
     }
 }

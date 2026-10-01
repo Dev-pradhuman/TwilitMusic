@@ -7,6 +7,11 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Shuffle
+import androidx.compose.material.icons.filled.Repeat
+import androidx.compose.material.icons.filled.RepeatOne
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Pause
@@ -24,6 +29,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.media3.common.Player
 import com.twilitmusic.app.R
 import coil.compose.AsyncImage
 import com.twilitmusic.app.domain.model.Track
@@ -43,6 +49,14 @@ fun NowPlayingScreen(
     viewModel: MainViewModel
 ) {
     var showQueue by remember { mutableStateOf(false) }
+    val position by viewModel.musicController.position.collectAsState()
+    val duration by viewModel.musicController.duration.collectAsState()
+    var sliderPosition by remember { mutableStateOf<Float?>(null) }
+    val displayPosition = sliderPosition ?: position.toFloat()
+    
+    val shuffleModeEnabled by viewModel.musicController.shuffleModeEnabled.collectAsState()
+    val repeatMode by viewModel.musicController.repeatMode.collectAsState()
+    val isLiked by viewModel.isCurrentTrackLiked.collectAsState()
 
     if (showQueue) {
         QueueSheet(
@@ -85,42 +99,89 @@ fun NowPlayingScreen(
                         .clip(MaterialTheme.shapes.large)
                 )
                 Spacer(modifier = Modifier.height(32.dp))
-                Text(
-                    track.title,
-                    style = MaterialTheme.typography.titleLarge,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Text(
-                    track.artist,
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            track.title,
+                            style = MaterialTheme.typography.titleLarge,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Text(
+                            track.artist,
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    IconButton(onClick = { viewModel.toggleLike() }) {
+                        Icon(
+                            imageVector = if (isLiked) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                            contentDescription = "Like",
+                            tint = if (isLiked) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                }
                 Spacer(modifier = Modifier.height(32.dp))
-                Slider(value = 0f, onValueChange = {})
+                Slider(
+                    value = if (duration > 0) displayPosition / duration.toFloat() else 0f,
+                    onValueChange = { sliderPosition = it * duration.toFloat() },
+                    onValueChangeFinished = {
+                        sliderPosition?.let { viewModel.musicController.seekTo(it.toLong()) }
+                        sliderPosition = null
+                    }
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(formatTime(displayPosition.toLong()), style = MaterialTheme.typography.labelMedium)
+                    Text(formatTime(duration), style = MaterialTheme.typography.labelMedium)
+                }
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
+                    IconButton(onClick = { viewModel.musicController.toggleShuffle() }) {
+                        Icon(
+                            imageVector = Icons.Default.Shuffle,
+                            contentDescription = "Shuffle",
+                            tint = if (shuffleModeEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+                        )
+                    }
                     IconButton(onClick = onPrev) {
                         Icon(Icons.Default.SkipPrevious, stringResource(R.string.previous), modifier = Modifier.size(48.dp))
                     }
                     FloatingActionButton(onClick = onPlayPause) {
                         Icon(
-                            if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
-                            stringResource(R.string.play_pause),
-                            modifier = Modifier.size(32.dp)
+                            imageVector = if (isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
+                            contentDescription = if (isPlaying) stringResource(R.string.pause) else stringResource(R.string.play)
                         )
                     }
                     IconButton(onClick = onNext) {
                         Icon(Icons.Default.SkipNext, stringResource(R.string.next), modifier = Modifier.size(48.dp))
+                    }
+                    IconButton(onClick = { viewModel.musicController.cycleRepeatMode() }) {
+                        val icon = if (repeatMode == Player.REPEAT_MODE_ONE) Icons.Default.RepeatOne else Icons.Default.Repeat
+                        val tint = if (repeatMode != Player.REPEAT_MODE_OFF) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+                        Icon(
+                            imageVector = icon,
+                            contentDescription = "Repeat",
+                            tint = tint
+                        )
                     }
                 }
                 Spacer(modifier = Modifier.weight(1f))
             }
         }
     }
+}
+
+private fun formatTime(ms: Long): String {
+    val totalSeconds = ms / 1000
+    val minutes = totalSeconds / 60
+    val seconds = totalSeconds % 60
+    return String.format("%02d:%02d", minutes, seconds)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
