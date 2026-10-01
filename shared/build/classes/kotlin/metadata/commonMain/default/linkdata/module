@@ -1,0 +1,2 @@
+
+<shared_commonMain>:com.twilitmusic.app.data.remote: com.twilitmusic.app.domain.model:%com.twilitmusic.app.domain.repository:&twilitmusic.shared.generated.resources

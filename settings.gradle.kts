@@ -16,4 +16,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "TwilitMusic"
-include(":app")
+include(":androidApp")
+include(":shared")

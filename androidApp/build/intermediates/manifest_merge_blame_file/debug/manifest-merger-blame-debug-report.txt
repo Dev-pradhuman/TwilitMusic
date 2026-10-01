@@ -1,0 +1,196 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.twilitmusic.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:4:5-67
+11-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:5:5-77
+12-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:5:22-74
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+13-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:6:5-92
+13-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:6:22-89
+14    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+14-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:7:5-77
+14-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:7:22-74
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:22:5-79
+15-->[androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:22:22-76
+16
+17    <permission
+17-->[androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+18        android:name="com.twilitmusic.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.twilitmusic.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:9:5-40:19
+24        android:name="com.twilitmusic.app.TwilitApp"
+24-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:10:9-34
+25        android:allowBackup="true"
+25-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:11:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+27        android:debuggable="true"
+28        android:extractNativeLibs="false"
+29        android:icon="@mipmap/ic_launcher"
+29-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:12:9-43
+30        android:label="@string/app_name"
+30-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:13:9-41
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:14:9-54
+32        android:supportsRtl="true"
+32-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:15:9-35
+33        android:theme="@style/Theme.TwilitMusic" >
+33-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:16:9-49
+34        <activity
+34-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:17:9-25:20
+35            android:name="com.twilitmusic.app.ui.MainActivity"
+35-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:18:13-44
+36            android:exported="true"
+36-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:19:13-36
+37            android:theme="@style/Theme.TwilitMusic" >
+37-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:20:13-53
+38            <intent-filter>
+38-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:21:13-24:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:22:17-69
+39-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:22:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:23:17-77
+41-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:23:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <service
+45-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:27:9-34:19
+46            android:name="com.twilitmusic.app.playback.MusicService"
+46-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:28:13-50
+47            android:exported="true"
+47-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:29:13-36
+48            android:foregroundServiceType="mediaPlayback" >
+48-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:30:13-58
+49            <intent-filter>
+49-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:31:13-33:29
+50                <action android:name="androidx.media3.session.MediaSessionService" />
+50-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:32:17-86
+50-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:32:25-83
+51            </intent-filter>
+52        </service>
+53        <service
+53-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:35:9-39:19
+54            android:name="com.twilitmusic.app.playback.TwilitDownloadService"
+54-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:35:18-64
+55            android:exported="false" >
+55-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:35:65-89
+56            <intent-filter>
+56-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:36:13-38:29
+57                <action android:name="androidx.media3.exoplayer.downloadService.action.RESTART" />
+57-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:37:17-98
+57-->/home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:37:25-96
+58            </intent-filter>
+59        </service>
+60        <service
+60-->[androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+61            android:name="androidx.room.MultiInstanceInvalidationService"
+61-->[androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+62            android:directBootAware="true"
+62-->[androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+63            android:exported="false" />
+63-->[androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+64
+65        <activity
+65-->[androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+66            android:name="androidx.compose.ui.tooling.PreviewActivity"
+66-->[androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+67            android:exported="true" />
+67-->[androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+68
+69        <provider
+69-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+70            android:name="androidx.startup.InitializationProvider"
+70-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+71            android:authorities="com.twilitmusic.app.androidx-startup"
+71-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+72            android:exported="false" >
+72-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+73            <meta-data
+73-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+74-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+75                android:value="androidx.startup" />
+75-->[androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+76            <meta-data
+76-->[androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:29:13-31:52
+77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+77-->[androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:30:17-78
+78                android:value="androidx.startup" />
+78-->[androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:31:17-49
+79            <meta-data
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+80                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+81                android:value="androidx.startup" />
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+82        </provider>
+83
+84        <activity
+84-->[androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:23:9-25:39
+85            android:name="androidx.activity.ComponentActivity"
+85-->[androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:24:13-63
+86            android:exported="true" />
+86-->[androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:25:13-36
+87
+88        <receiver
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+89            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+90            android:directBootAware="false"
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+91            android:enabled="true"
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+92            android:exported="true"
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+93            android:permission="android.permission.DUMP" >
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+95                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+98                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+101                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+102            </intent-filter>
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+104                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+105            </intent-filter>
+106        </receiver>
+107    </application>
+108
+109</manifest>

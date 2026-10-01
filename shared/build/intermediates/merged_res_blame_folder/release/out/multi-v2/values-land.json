@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.twilitmusic.app.shared-mergeReleaseResources-61:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/f778031aa115e6c7433a6065588682a7/transformed/appcompat-1.7.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.twilitmusic.app.shared-merged_res-63:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/f778031aa115e6c7433a6065588682a7/transformed/appcompat-1.7.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        }
+    ]
+}

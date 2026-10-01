@@ -1,0 +1,322 @@
+[
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_back.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_back.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_settings.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_settings.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_forward_5.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_forward_5.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playlist_remove.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playlist_remove.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/ic_call_answer_low.xml",
+        "source": "com.twilitmusic.app.shared-core-1.13.1-47:/drawable-anydpi-v21/ic_call_answer_low.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_repeat_all.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_repeat_all.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_flag_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_flag_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_queue_next.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_queue_next.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_check_circle_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_check_circle_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_flag_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_flag_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_thumb_down_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_thumb_down_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_forward_30.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_forward_30.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_plus.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_plus.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_next.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_next.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_minus.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_minus.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_bookmark_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_bookmark_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_volume_off.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_volume_off.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_sync.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_sync.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_repeat_one.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_repeat_one.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_forward_10.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_forward_10.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_1_8.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_1_8.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_check_circle_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_check_circle_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_heart_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_heart_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media_session_service_notification_ic_music_note.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media_session_service_notification_ic_music_note.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_plus_circle_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_plus_circle_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_heart_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_heart_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_thumb_up_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_thumb_up_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_play.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_play.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_share.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_share.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_back_10.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_back_10.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_pause.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_pause.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_stop.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_stop.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/ic_call_answer_video.xml",
+        "source": "com.twilitmusic.app.shared-core-1.13.1-47:/drawable-anydpi-v21/ic_call_answer_video.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_previous.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_previous.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_1_5.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_1_5.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/ic_call_decline.xml",
+        "source": "com.twilitmusic.app.shared-core-1.13.1-47:/drawable-anydpi-v21/ic_call_decline.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_shuffle_on.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_shuffle_on.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_plus_circle_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_plus_circle_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_1_2.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_1_2.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_queue_add.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_queue_add.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/ic_call_answer.xml",
+        "source": "com.twilitmusic.app.shared-core-1.13.1-47:/drawable-anydpi-v21/ic_call_answer.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_closed_captions_off.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_closed_captions_off.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_forward.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_forward.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_rewind.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_rewind.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_album.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_album.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_repeat_off.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_repeat_off.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_block.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_block.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/ic_call_decline_low.xml",
+        "source": "com.twilitmusic.app.shared-core-1.13.1-47:/drawable-anydpi-v21/ic_call_decline_low.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_star_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_star_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_signal.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_signal.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_2_0.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_2_0.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_minus_circle_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_minus_circle_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_1_0.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_1_0.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_bookmark_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_bookmark_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_quality.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_quality.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/ic_call_answer_video_low.xml",
+        "source": "com.twilitmusic.app.shared-core-1.13.1-47:/drawable-anydpi-v21/ic_call_answer_video_low.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_back_15.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_back_15.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_fast_forward.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_fast_forward.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_radio.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_radio.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_artist.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_artist.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_subtitles.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_subtitles.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_volume_down.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_volume_down.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_subtitles_off.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_subtitles_off.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_thumb_up_unfilled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_thumb_up_unfilled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_thumb_down_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_thumb_down_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_shuffle_off.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_shuffle_off.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_shuffle_star.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_shuffle_star.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_closed_captions.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_closed_captions.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_back_5.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_back_5.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_forward_15.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_forward_15.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_volume_up.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_volume_up.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_skip_back_30.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_skip_back_30.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_star_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_star_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_feed.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_feed.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_0_8.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_0_8.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_queue_remove.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_queue_remove.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playback_speed_0_5.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playback_speed_0_5.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_minus_circle_filled.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_minus_circle_filled.xml"
+    },
+    {
+        "merged": "com.twilitmusic.app.shared-merged_res-63:/drawable-anydpi-v21/media3_icon_playlist_add.xml",
+        "source": "com.twilitmusic.app.shared-media3-session-1.4.1-25:/drawable-anydpi-v21/media3_icon_playlist_add.xml"
+    }
+]

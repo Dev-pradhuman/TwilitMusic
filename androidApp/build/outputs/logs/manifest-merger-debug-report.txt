@@ -1,0 +1,506 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:2:1-42:12
+MERGED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/686988771cbc88d2986796b7723aa471/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/ba9ac4ecf250c5525f032224f868f125/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/a9fbb0a641bdfb9c935820fb16810f57/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/a3ae7b22599bb7a9667b92edf9e93184/transformed/navigation-common-2.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/9545eb93f57e5c4b884de2ee5890b1c6/transformed/navigation-common-ktx-2.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/d226701b1236122380bd7016e9c3e159/transformed/navigation-runtime-2.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/829860f1f89985cf0d0229d107d7d234/transformed/navigation-runtime-ktx-2.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/fab0fef5f8ccd7cd8c3d3da22e8b784e/transformed/navigation-compose-2.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:hilt-android:2.50] /home/pradhuman/.gradle/caches/transforms-4/0849ba30ca2274b23ccc0d8019263d81/transformed/hilt-android-2.50/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.fragment:fragment:1.5.1] /home/pradhuman/.gradle/caches/transforms-4/8481590e9685e2703e5a2edc706b9997/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [io.coil-kt:coil-compose:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/eaaae1b773e47ae91d6e4f83fc4929c4/transformed/coil-compose-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/17402a54469b7d94d12ad7e3e64c4228/transformed/coil-compose-base-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /home/pradhuman/.gradle/caches/transforms-4/34590e4753113dcef1b3722591642ba4/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
+MERGED from [sh.calvin.reorderable:reorderable-android-debug:3.1.0] /home/pradhuman/.gradle/caches/transforms-4/93cb861333b05029315a4b0297503341/transformed/reorderable-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /home/pradhuman/.gradle/caches/transforms-4/836e3cb2359270dd49baaaf252f6cbaa/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/06d609bec55841959720a4d5e2006d85/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/788bc637407d4a4992d5fe116cb44064/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/2d606cf0f9fd406cefdb4161e60cfa72/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/23c707cc572ded391e09e79ab1039c51/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/23b86ba665ffb7c48ee2b6afea2b92d4/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/42fcac5fa90a03b4b787e938defaca16/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/4cbbcef73631b2c4f7eef2a8c09f11af/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/50d9fe33d1992ca6db8dfa8c9176e490/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/a9d56998ec1e61529c0b7220c13af4d6/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/3e4afcb3516999cfdc10339236f9fa6c/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/ffebc38481469f0d951381e903489ae9/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/e0d71b38e42f5cecdd13bceb13fedca5/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/640ce9b868871e8e884867b0b2960b4b/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/e5ff5ce1f3f4d455effe2394953f796b/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/a9af6f1be11247c58fa69480d65ca814/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/c9f8c19b1c2a2f8e1acfbbf6e05c84cf/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/e7373989bdb0519bed6688970e6c7c4a/transformed/coil-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/c3db0479de5535b1ed9f509313a1f7a8/transformed/coil-base-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.media3:media3-session:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/4a7b877121eaa2f03bd11f40d2e0df4b/transformed/media3-session-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-ui:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1a3a4dcb815357dd12c4dbda8de09aeb/transformed/media3-ui-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-extractor:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1522988b73691c71331d7488db03bc35/transformed/media3-extractor-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-container:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/15fb883461c6c6c34c87326107d72a4c/transformed/media3-container-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-datasource:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/fd4e9699216f28222f7a89b204eb6c17/transformed/media3-datasource-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-decoder:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/80aebd694a2552dd324f955448dec49f/transformed/media3-decoder-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-database:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1416cb695c583617821540b5f901695d/transformed/media3-database-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-exoplayer:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/a69fdc5010dd461f61f519593067ab61/transformed/media3-exoplayer-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.6.0] /home/pradhuman/.gradle/caches/transforms-4/b783fe04a7505d3d2316247d14cccdea/transformed/media-1.6.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/f51b043d1dd068d72bcae6b864ba0922/transformed/recyclerview-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/282afdc1f2f14305acade04f2b689f5a/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/38156ab260a0c66c5424341ea76fefeb/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/b7ced4560114ea06f17a5e61a72e3acb/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/90c11b7bdbd79557db1648afc440be28/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/3e1e17b593c3a9e532cb6ef97b7cd8b6/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/4028757e122e9d5d0183b06e7653a190/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.autofill:autofill:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/6a42ac7ac4213cd283acfb70c7d95a41/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/2be1f2418c8bf02c0d5b2e46331f38a6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/3318c0d050564d3fcf7aeb5106c19f75/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/pradhuman/.gradle/caches/transforms-4/3b902f7b7d0302931052c648ec99d462/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/da4ab82ec9cefb0d168e4e97bd8436b6/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/4910129bea4d6971f1c398e3564bb10f/transformed/lifecycle-livedata-core-ktx-2.8.5/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/82731636e882f5caa91b1ed3bc6d264a/transformed/lifecycle-viewmodel-ktx-2.8.5/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/3d8866c8c319aa82caf82106531507c6/transformed/lifecycle-livedata-core-2.8.5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/89fa602227bfa0a4f943ae35a1fb5b04/transformed/lifecycle-livedata-2.8.5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/70c07f433a3f918bbf8c9cecc4e5e2b5/transformed/lifecycle-viewmodel-2.8.5/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/978b633eda7e2b011ddc58a8ff2891ac/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/45adb04409df4faf37a12fe610af6e32/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/c59b3be0fb00551376a4fe865f5fbdd3/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/7864b5b603ab28baaf183cecccfea06d/transformed/lifecycle-viewmodel-savedstate-2.8.5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/d153e2164138bb860932a9d10f97247f/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/5d79797ced893dccbaab6bdfa6ae17b2/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/e5c876fc1df65d04a45f0ab604266f1d/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/01ab5be07b1bb9c1d4d5d07c82c4f6c1/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/ad8f9a101bf95fe89b4fa0a83159ec93/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/5f91f96b7d0358aa4abd4fc840e9bd47/transformed/activity-compose-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /home/pradhuman/.gradle/caches/transforms-4/d9e73069d4259313e26af5b5e34bf87d/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /home/pradhuman/.gradle/caches/transforms-4/405c9d5273a5fb372d05bd0444cecffd/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/b5d5430d0a8daad425e8596e1a03b206/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/25fd0df24083a58d5ebabf34a64981dd/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/pradhuman/.gradle/caches/transforms-4/135d7a3e39829bdd47f6b9b85db6c293/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/9c86ebc0417df847cff244597928b2cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/pradhuman/.gradle/caches/transforms-4/a85a46e57249ecaff722797a78979770/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/pradhuman/.gradle/caches/transforms-4/6f16e855b1ac9d92d66120d8d36a625e/transformed/exifinterface-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/01ea6ed217d31c83942590c7f23f4fab/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/0c0fddc770419183f4a7c82342de08f8/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.50] /home/pradhuman/.gradle/caches/transforms-4/beee5e07996886c39eae6bab07b4d15a/transformed/dagger-lint-aar-2.50/AndroidManifest.xml:16:1-19:12
+	package
+		INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:5:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:6:5-92
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:6:22-89
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:7:5-77
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:7:22-74
+application
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:9:5-40:19
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:9:5-40:19
+MERGED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/9c86ebc0417df847cff244597928b2cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/9c86ebc0417df847cff244597928b2cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:16:9-49
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:10:9-34
+activity#com.twilitmusic.app.ui.MainActivity
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:17:9-25:20
+	android:exported
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:19:13-36
+	android:theme
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:20:13-53
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:18:13-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:21:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:23:27-74
+service#com.twilitmusic.app.playback.MusicService
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:27:9-34:19
+	android:exported
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:29:13-36
+	android:foregroundServiceType
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:30:13-58
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:28:13-50
+intent-filter#action:name:androidx.media3.session.MediaSessionService
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:31:13-33:29
+action#androidx.media3.session.MediaSessionService
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:32:25-83
+service#com.twilitmusic.app.playback.TwilitDownloadService
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:35:9-39:19
+	android:exported
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:35:65-89
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:35:18-64
+intent-filter#action:name:androidx.media3.exoplayer.downloadService.action.RESTART
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:36:13-38:29
+action#androidx.media3.exoplayer.downloadService.action.RESTART
+ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:37:17-98
+	android:name
+		ADDED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml:37:25-96
+uses-sdk
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+MERGED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/686988771cbc88d2986796b7723aa471/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/686988771cbc88d2986796b7723aa471/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/ba9ac4ecf250c5525f032224f868f125/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/ba9ac4ecf250c5525f032224f868f125/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/a9fbb0a641bdfb9c935820fb16810f57/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/a9fbb0a641bdfb9c935820fb16810f57/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/a3ae7b22599bb7a9667b92edf9e93184/transformed/navigation-common-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/a3ae7b22599bb7a9667b92edf9e93184/transformed/navigation-common-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/9545eb93f57e5c4b884de2ee5890b1c6/transformed/navigation-common-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/9545eb93f57e5c4b884de2ee5890b1c6/transformed/navigation-common-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/d226701b1236122380bd7016e9c3e159/transformed/navigation-runtime-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/d226701b1236122380bd7016e9c3e159/transformed/navigation-runtime-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/829860f1f89985cf0d0229d107d7d234/transformed/navigation-runtime-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/829860f1f89985cf0d0229d107d7d234/transformed/navigation-runtime-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/fab0fef5f8ccd7cd8c3d3da22e8b784e/transformed/navigation-compose-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.0] /home/pradhuman/.gradle/caches/transforms-4/fab0fef5f8ccd7cd8c3d3da22e8b784e/transformed/navigation-compose-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:hilt-android:2.50] /home/pradhuman/.gradle/caches/transforms-4/0849ba30ca2274b23ccc0d8019263d81/transformed/hilt-android-2.50/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.50] /home/pradhuman/.gradle/caches/transforms-4/0849ba30ca2274b23ccc0d8019263d81/transformed/hilt-android-2.50/AndroidManifest.xml:18:3-42
+MERGED from [androidx.fragment:fragment:1.5.1] /home/pradhuman/.gradle/caches/transforms-4/8481590e9685e2703e5a2edc706b9997/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /home/pradhuman/.gradle/caches/transforms-4/8481590e9685e2703e5a2edc706b9997/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [io.coil-kt:coil-compose:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/eaaae1b773e47ae91d6e4f83fc4929c4/transformed/coil-compose-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/eaaae1b773e47ae91d6e4f83fc4929c4/transformed/coil-compose-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/17402a54469b7d94d12ad7e3e64c4228/transformed/coil-compose-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/17402a54469b7d94d12ad7e3e64c4228/transformed/coil-compose-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /home/pradhuman/.gradle/caches/transforms-4/34590e4753113dcef1b3722591642ba4/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /home/pradhuman/.gradle/caches/transforms-4/34590e4753113dcef1b3722591642ba4/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [sh.calvin.reorderable:reorderable-android-debug:3.1.0] /home/pradhuman/.gradle/caches/transforms-4/93cb861333b05029315a4b0297503341/transformed/reorderable-debug/AndroidManifest.xml:5:5-44
+MERGED from [sh.calvin.reorderable:reorderable-android-debug:3.1.0] /home/pradhuman/.gradle/caches/transforms-4/93cb861333b05029315a4b0297503341/transformed/reorderable-debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /home/pradhuman/.gradle/caches/transforms-4/836e3cb2359270dd49baaaf252f6cbaa/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /home/pradhuman/.gradle/caches/transforms-4/836e3cb2359270dd49baaaf252f6cbaa/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/06d609bec55841959720a4d5e2006d85/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/06d609bec55841959720a4d5e2006d85/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/788bc637407d4a4992d5fe116cb44064/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/788bc637407d4a4992d5fe116cb44064/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/2d606cf0f9fd406cefdb4161e60cfa72/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/2d606cf0f9fd406cefdb4161e60cfa72/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/23c707cc572ded391e09e79ab1039c51/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/23c707cc572ded391e09e79ab1039c51/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/23b86ba665ffb7c48ee2b6afea2b92d4/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/23b86ba665ffb7c48ee2b6afea2b92d4/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/42fcac5fa90a03b4b787e938defaca16/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/42fcac5fa90a03b4b787e938defaca16/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/4cbbcef73631b2c4f7eef2a8c09f11af/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/4cbbcef73631b2c4f7eef2a8c09f11af/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/50d9fe33d1992ca6db8dfa8c9176e490/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/50d9fe33d1992ca6db8dfa8c9176e490/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/a9d56998ec1e61529c0b7220c13af4d6/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/a9d56998ec1e61529c0b7220c13af4d6/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/3e4afcb3516999cfdc10339236f9fa6c/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/3e4afcb3516999cfdc10339236f9fa6c/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/ffebc38481469f0d951381e903489ae9/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/ffebc38481469f0d951381e903489ae9/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/e0d71b38e42f5cecdd13bceb13fedca5/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/e0d71b38e42f5cecdd13bceb13fedca5/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/640ce9b868871e8e884867b0b2960b4b/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/640ce9b868871e8e884867b0b2960b4b/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/e5ff5ce1f3f4d455effe2394953f796b/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/e5ff5ce1f3f4d455effe2394953f796b/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/a9af6f1be11247c58fa69480d65ca814/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/a9af6f1be11247c58fa69480d65ca814/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/c9f8c19b1c2a2f8e1acfbbf6e05c84cf/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/c9f8c19b1c2a2f8e1acfbbf6e05c84cf/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/e7373989bdb0519bed6688970e6c7c4a/transformed/coil-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/e7373989bdb0519bed6688970e6c7c4a/transformed/coil-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/c3db0479de5535b1ed9f509313a1f7a8/transformed/coil-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] /home/pradhuman/.gradle/caches/transforms-4/c3db0479de5535b1ed9f509313a1f7a8/transformed/coil-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media3:media3-session:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/4a7b877121eaa2f03bd11f40d2e0df4b/transformed/media3-session-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-session:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/4a7b877121eaa2f03bd11f40d2e0df4b/transformed/media3-session-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-ui:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1a3a4dcb815357dd12c4dbda8de09aeb/transformed/media3-ui-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-ui:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1a3a4dcb815357dd12c4dbda8de09aeb/transformed/media3-ui-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1522988b73691c71331d7488db03bc35/transformed/media3-extractor-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1522988b73691c71331d7488db03bc35/transformed/media3-extractor-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/15fb883461c6c6c34c87326107d72a4c/transformed/media3-container-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/15fb883461c6c6c34c87326107d72a4c/transformed/media3-container-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/fd4e9699216f28222f7a89b204eb6c17/transformed/media3-datasource-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/fd4e9699216f28222f7a89b204eb6c17/transformed/media3-datasource-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/80aebd694a2552dd324f955448dec49f/transformed/media3-decoder-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/80aebd694a2552dd324f955448dec49f/transformed/media3-decoder-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1416cb695c583617821540b5f901695d/transformed/media3-database-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/1416cb695c583617821540b5f901695d/transformed/media3-database-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/a69fdc5010dd461f61f519593067ab61/transformed/media3-exoplayer-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/a69fdc5010dd461f61f519593067ab61/transformed/media3-exoplayer-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.6.0] /home/pradhuman/.gradle/caches/transforms-4/b783fe04a7505d3d2316247d14cccdea/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /home/pradhuman/.gradle/caches/transforms-4/b783fe04a7505d3d2316247d14cccdea/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/f51b043d1dd068d72bcae6b864ba0922/transformed/recyclerview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/f51b043d1dd068d72bcae6b864ba0922/transformed/recyclerview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/282afdc1f2f14305acade04f2b689f5a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/282afdc1f2f14305acade04f2b689f5a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/38156ab260a0c66c5424341ea76fefeb/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/38156ab260a0c66c5424341ea76fefeb/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/b7ced4560114ea06f17a5e61a72e3acb/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/b7ced4560114ea06f17a5e61a72e3acb/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/90c11b7bdbd79557db1648afc440be28/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/pradhuman/.gradle/caches/transforms-4/90c11b7bdbd79557db1648afc440be28/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/3e1e17b593c3a9e532cb6ef97b7cd8b6/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/3e1e17b593c3a9e532cb6ef97b7cd8b6/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/4028757e122e9d5d0183b06e7653a190/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/pradhuman/.gradle/caches/transforms-4/4028757e122e9d5d0183b06e7653a190/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/6a42ac7ac4213cd283acfb70c7d95a41/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/6a42ac7ac4213cd283acfb70c7d95a41/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/2be1f2418c8bf02c0d5b2e46331f38a6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/2be1f2418c8bf02c0d5b2e46331f38a6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/3318c0d050564d3fcf7aeb5106c19f75/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/3318c0d050564d3fcf7aeb5106c19f75/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/pradhuman/.gradle/caches/transforms-4/3b902f7b7d0302931052c648ec99d462/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/pradhuman/.gradle/caches/transforms-4/3b902f7b7d0302931052c648ec99d462/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/da4ab82ec9cefb0d168e4e97bd8436b6/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/da4ab82ec9cefb0d168e4e97bd8436b6/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/4910129bea4d6971f1c398e3564bb10f/transformed/lifecycle-livedata-core-ktx-2.8.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/4910129bea4d6971f1c398e3564bb10f/transformed/lifecycle-livedata-core-ktx-2.8.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/82731636e882f5caa91b1ed3bc6d264a/transformed/lifecycle-viewmodel-ktx-2.8.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/82731636e882f5caa91b1ed3bc6d264a/transformed/lifecycle-viewmodel-ktx-2.8.5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/3d8866c8c319aa82caf82106531507c6/transformed/lifecycle-livedata-core-2.8.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/3d8866c8c319aa82caf82106531507c6/transformed/lifecycle-livedata-core-2.8.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/89fa602227bfa0a4f943ae35a1fb5b04/transformed/lifecycle-livedata-2.8.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/89fa602227bfa0a4f943ae35a1fb5b04/transformed/lifecycle-livedata-2.8.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/70c07f433a3f918bbf8c9cecc4e5e2b5/transformed/lifecycle-viewmodel-2.8.5/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/70c07f433a3f918bbf8c9cecc4e5e2b5/transformed/lifecycle-viewmodel-2.8.5/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/978b633eda7e2b011ddc58a8ff2891ac/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/978b633eda7e2b011ddc58a8ff2891ac/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/45adb04409df4faf37a12fe610af6e32/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/45adb04409df4faf37a12fe610af6e32/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/c59b3be0fb00551376a4fe865f5fbdd3/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/c59b3be0fb00551376a4fe865f5fbdd3/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/7864b5b603ab28baaf183cecccfea06d/transformed/lifecycle-viewmodel-savedstate-2.8.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/7864b5b603ab28baaf183cecccfea06d/transformed/lifecycle-viewmodel-savedstate-2.8.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/d153e2164138bb860932a9d10f97247f/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/d153e2164138bb860932a9d10f97247f/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/5d79797ced893dccbaab6bdfa6ae17b2/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/5d79797ced893dccbaab6bdfa6ae17b2/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/e5c876fc1df65d04a45f0ab604266f1d/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/e5c876fc1df65d04a45f0ab604266f1d/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/01ab5be07b1bb9c1d4d5d07c82c4f6c1/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/01ab5be07b1bb9c1d4d5d07c82c4f6c1/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/ad8f9a101bf95fe89b4fa0a83159ec93/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/ad8f9a101bf95fe89b4fa0a83159ec93/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/5f91f96b7d0358aa4abd4fc840e9bd47/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /home/pradhuman/.gradle/caches/transforms-4/5f91f96b7d0358aa4abd4fc840e9bd47/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /home/pradhuman/.gradle/caches/transforms-4/d9e73069d4259313e26af5b5e34bf87d/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /home/pradhuman/.gradle/caches/transforms-4/d9e73069d4259313e26af5b5e34bf87d/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /home/pradhuman/.gradle/caches/transforms-4/405c9d5273a5fb372d05bd0444cecffd/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /home/pradhuman/.gradle/caches/transforms-4/405c9d5273a5fb372d05bd0444cecffd/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/b5d5430d0a8daad425e8596e1a03b206/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/b5d5430d0a8daad425e8596e1a03b206/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/25fd0df24083a58d5ebabf34a64981dd/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/25fd0df24083a58d5ebabf34a64981dd/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/pradhuman/.gradle/caches/transforms-4/135d7a3e39829bdd47f6b9b85db6c293/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/pradhuman/.gradle/caches/transforms-4/135d7a3e39829bdd47f6b9b85db6c293/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/9c86ebc0417df847cff244597928b2cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/9c86ebc0417df847cff244597928b2cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/pradhuman/.gradle/caches/transforms-4/a85a46e57249ecaff722797a78979770/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/pradhuman/.gradle/caches/transforms-4/a85a46e57249ecaff722797a78979770/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/pradhuman/.gradle/caches/transforms-4/6f16e855b1ac9d92d66120d8d36a625e/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/pradhuman/.gradle/caches/transforms-4/6f16e855b1ac9d92d66120d8d36a625e/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/01ea6ed217d31c83942590c7f23f4fab/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/01ea6ed217d31c83942590c7f23f4fab/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/0c0fddc770419183f4a7c82342de08f8/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/pradhuman/.gradle/caches/transforms-4/0c0fddc770419183f4a7c82342de08f8/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.50] /home/pradhuman/.gradle/caches/transforms-4/beee5e07996886c39eae6bab07b4d15a/transformed/dagger-lint-aar-2.50/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.50] /home/pradhuman/.gradle/caches/transforms-4/beee5e07996886c39eae6bab07b4d15a/transformed/dagger-lint-aar-2.50/AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/pradhuman/projects/twilitmusic/androidApp/src/main/AndroidManifest.xml
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /home/pradhuman/.gradle/caches/transforms-4/b9f15a9da02a4d60c5155ff82cbfb2fb/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/185c293f8dc344d96d8c51e560aadd4f/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/a69fdc5010dd461f61f519593067ab61/transformed/media3-exoplayer-1.2.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/a69fdc5010dd461f61f519593067ab61/transformed/media3-exoplayer-1.2.1/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [androidx.media3:media3-common:1.2.1] /home/pradhuman/.gradle/caches/transforms-4/63aac8425bfb720f9bafc28064bec8ae/transformed/media3-common-1.2.1/AndroidManifest.xml:22:22-76
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/pradhuman/.gradle/caches/transforms-4/55ae1244d29a8b40ef553609eee06251/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/pradhuman/.gradle/caches/transforms-4/d78a4d85b168bbd2f00e4b64a1ab095b/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.twilitmusic.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.twilitmusic.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/pradhuman/.gradle/caches/transforms-4/9a5ce3ae97297d3e2b1bbcffddeb7550/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.5] /home/pradhuman/.gradle/caches/transforms-4/1b0c809e94f99df48d147adaa90256ae/transformed/lifecycle-process-2.8.5/AndroidManifest.xml:30:17-78
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.1] /home/pradhuman/.gradle/caches/transforms-4/31c56a9312c46454150bed3039c76ed8/transformed/ui-test-manifest-1.7.1/AndroidManifest.xml:24:13-63
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/pradhuman/.gradle/caches/transforms-4/394c616106310a9bbf239b25241b6322/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
