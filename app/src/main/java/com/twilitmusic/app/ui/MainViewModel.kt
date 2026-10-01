@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import android.app.Application
 import android.content.Context
 import androidx.media3.common.MediaItem
+import com.twilitmusic.app.data.local.dao.QueueDao
 import com.twilitmusic.app.domain.repository.LibraryRepository
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
@@ -33,7 +34,8 @@ class MainViewModel @Inject constructor(
     private val application: Application,
     private val musicSource: MusicSource,
     val musicController: MusicController,
-    private val libraryRepository: LibraryRepository
+    private val libraryRepository: LibraryRepository,
+    private val queueDao: QueueDao
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(MainUiState())

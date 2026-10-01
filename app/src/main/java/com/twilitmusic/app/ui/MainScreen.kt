@@ -18,6 +18,8 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
@@ -34,6 +36,7 @@ import com.twilitmusic.app.domain.model.Track
 fun TwilitAppScreen(
     viewModel: MainViewModel = hiltViewModel()
 ) {
+    val navController = rememberNavController()
     var currentTab by remember { mutableStateOf(0) }
     val uiState by viewModel.uiState.collectAsState()
     val isPlaying by viewModel.musicController.isPlaying.collectAsState()
@@ -58,19 +61,19 @@ fun TwilitAppScreen(
                 NavigationBar {
                     NavigationBarItem(
                         selected = currentTab == 0,
-                        onClick = { currentTab = 0 },
+                        onClick = { currentTab = 0; navController.navigate(HomeRoute) { popUpTo(navController.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true } },
                         icon = { Icon(Icons.Default.Home, contentDescription = stringResource(R.string.home)) },
                         label = { Text(stringResource(R.string.home)) }
                     )
                     NavigationBarItem(
                         selected = currentTab == 1,
-                        onClick = { currentTab = 1 },
+                        onClick = { currentTab = 1; navController.navigate(SearchRoute) { popUpTo(navController.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true } },
                         icon = { Icon(Icons.Default.Search, contentDescription = stringResource(R.string.search)) },
                         label = { Text(stringResource(R.string.search)) }
                     )
                     NavigationBarItem(
                         selected = currentTab == 2,
-                        onClick = { currentTab = 2 },
+                        onClick = { currentTab = 2; navController.navigate(LibraryRoute) { popUpTo(navController.graph.findStartDestination().id) { saveState = true }; launchSingleTop = true; restoreState = true } },
                         icon = { Icon(Icons.Default.LibraryMusic, contentDescription = stringResource(R.string.library)) },
                         label = { Text(stringResource(R.string.library)) }
                     )
@@ -79,11 +82,7 @@ fun TwilitAppScreen(
         }
     ) { paddingValues ->
         Box(modifier = Modifier.padding(paddingValues)) {
-            when (currentTab) {
-                0 -> HomeScreen(uiState, onPlayTrack = viewModel::playTrack)
-                1 -> SearchScreen(viewModel, onTrackClick = { viewModel.playTrack(it) })
-                2 -> LibraryScreen(onTrackClick = { viewModel.playTrack(it) })
-            }
+            AppNavHost(navController = navController, viewModel = viewModel)
         }
     }
     

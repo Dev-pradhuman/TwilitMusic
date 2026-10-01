@@ -5,6 +5,7 @@ import com.twilitmusic.app.domain.repository.MusicSource
 import com.twilitmusic.app.playback.MusicController
 import android.app.Application
 import com.twilitmusic.app.domain.repository.LibraryRepository
+import com.twilitmusic.app.data.local.dao.QueueDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -27,6 +28,7 @@ class MainViewModelTest {
     private lateinit var mockMusicController: MusicController
     private lateinit var application: Application
     private lateinit var libraryRepository: LibraryRepository
+    private lateinit var queueDao: QueueDao
     private lateinit var viewModel: MainViewModel
 
     @Before
@@ -36,6 +38,7 @@ class MainViewModelTest {
         mockMusicController = mock()
         application = mock()
         libraryRepository = mock()
+        queueDao = mock()
         
         whenever(mockMusicSource.getFeaturedTracks()).thenReturn(emptyList())
         whenever(mockMusicSource.getNewTracks()).thenReturn(emptyList())
@@ -49,8 +52,10 @@ class MainViewModelTest {
         whenever(mockMusicController.currentTrack).thenReturn(currentTrackFlow)
         whenever(mockMusicController.queue).thenReturn(kotlinx.coroutines.flow.MutableStateFlow(emptyList()))
         whenever(libraryRepository.isLiked(org.mockito.kotlin.any())).thenReturn(kotlinx.coroutines.flow.MutableStateFlow(false))
+        whenever(queueDao.getQueue()).thenReturn(emptyList())
+        whenever(queueDao.getPlaybackState()).thenReturn(null)
         
-        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, libraryRepository)
+        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, libraryRepository, queueDao)
     }
 
     @After
@@ -65,7 +70,7 @@ class MainViewModelTest {
         whenever(mockMusicSource.getNewTracks()).thenReturn(tracks)
 
         // Initialize view model
-        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, libraryRepository)
+        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, libraryRepository, queueDao)
         testDispatcher.scheduler.advanceUntilIdle()
 
         val state = viewModel.uiState.value

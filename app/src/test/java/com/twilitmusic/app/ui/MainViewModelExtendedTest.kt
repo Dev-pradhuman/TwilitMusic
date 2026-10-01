@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.twilitmusic.app.domain.model.Track
 import com.twilitmusic.app.domain.repository.LibraryRepository
+import com.twilitmusic.app.data.local.dao.QueueDao
 import com.twilitmusic.app.domain.repository.MusicSource
 import com.twilitmusic.app.playback.MusicController
 import kotlinx.coroutines.Dispatchers
@@ -35,6 +36,7 @@ class MainViewModelExtendedTest {
     private lateinit var musicSource: MusicSource
     private lateinit var musicController: MusicController
     private lateinit var libraryRepository: LibraryRepository
+    private lateinit var queueDao: QueueDao
     private lateinit var viewModel: MainViewModel
 
     private val mockTrack = Track("1", "Test", "Artist", "url", "url")
@@ -49,6 +51,7 @@ class MainViewModelExtendedTest {
         musicSource = mock()
         musicController = mock()
         libraryRepository = mock()
+        queueDao = mock()
         
         whenever(application.getSharedPreferences(any(), any())).thenReturn(prefs)
         whenever(prefs.edit()).thenReturn(prefsEditor)
@@ -65,10 +68,12 @@ class MainViewModelExtendedTest {
         whenever(musicController.repeatMode).thenReturn(MutableStateFlow(0))
         
         whenever(libraryRepository.isLiked(any())).thenReturn(MutableStateFlow(false))
+        whenever(queueDao.getQueue()).thenReturn(emptyList())
+        whenever(queueDao.getPlaybackState()).thenReturn(null)
         whenever(musicSource.getFeaturedTracks()).thenReturn(emptyList())
         whenever(musicSource.getNewTracks()).thenReturn(emptyList())
         
-        viewModel = MainViewModel(application, musicSource, musicController, libraryRepository)
+        viewModel = MainViewModel(application, musicSource, musicController, libraryRepository, queueDao)
     }
 
     @After

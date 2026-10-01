@@ -20,7 +20,8 @@ import com.twilitmusic.app.domain.model.Track
 @Composable
 fun LibraryScreen(
     viewModel: LibraryViewModel = hiltViewModel(),
-    onTrackClick: (Track) -> Unit
+    onTrackClick: (Track) -> Unit,
+    onPlaylistClick: (Long) -> Unit = {}
 ) {
     var selectedTabIndex by remember { mutableStateOf(0) }
     val tabs = listOf("Playlists", "Liked", "History")
@@ -75,6 +76,7 @@ fun LibraryScreen(
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
+                                    .clickable { onPlaylistClick(playlist.id) }
                                     .padding(16.dp),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically

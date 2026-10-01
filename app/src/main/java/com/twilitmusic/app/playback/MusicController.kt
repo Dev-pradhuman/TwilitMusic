@@ -9,6 +9,9 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import com.twilitmusic.app.domain.model.Track
 import com.twilitmusic.app.domain.repository.LibraryRepository
+import com.twilitmusic.app.data.local.dao.QueueDao
+import com.twilitmusic.app.data.local.entity.QueueTrackEntity
+import com.twilitmusic.app.data.local.entity.PlaybackStateEntity
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,9 +27,10 @@ import kotlinx.coroutines.delay
 @Singleton
 class MusicController @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val libraryRepository: LibraryRepository
+    private val libraryRepository: LibraryRepository,
+    private val queueDao: QueueDao
 ) {
-    private var mediaController: MediaController? = null
+    internal var mediaController: MediaController? = null
     
     private val _isPlaying = MutableStateFlow(false)
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
@@ -130,13 +134,14 @@ class MusicController @Inject constructor(
     }
     
     private fun saveQueueState() {
-        val prefs = context.getSharedPreferences("music_prefs", android.content.Context.MODE_PRIVATE)
-        val trackIds = _queue.value.joinToString(",") { it.id }
-        val index = mediaController?.currentMediaItemIndex ?: 0
-        prefs.edit()
-            .putString("saved_queue", trackIds)
-            .putInt("saved_index", index)
-            .apply()
+        val tracks = _queue.value.mapIndexed { index, track -> 
+            QueueTrackEntity(trackId = track.id, title = track.title, artist = track.artist, artUrl = track.artUrl, sourceUrl = track.sourceUrl, position = index)
+        }
+        val currentIndex = mediaController?.currentMediaItemIndex ?: 0
+        val pos = mediaController?.currentPosition ?: 0L
+        CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
+            queueDao.saveFullState(tracks, PlaybackStateEntity(id = 1, currentIndex = currentIndex, positionMs = pos))
+        }
     }
 
     fun playTrack(track: Track) {
