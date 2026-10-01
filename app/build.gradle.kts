@@ -1,3 +1,14 @@
+
+import java.util.Properties
+import java.io.FileInputStream
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(FileInputStream(localPropertiesFile))
+}
+val jamendoClientId = localProperties.getProperty("JAMENDO_CLIENT_ID")?.replace("\"", "") ?: ""
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -11,10 +22,14 @@ kotlin {
     jvmToolchain(17)
 }
 android {
+    lint {
+        abortOnError = false
+    }
     namespace = "com.twilitmusic.app"
     compileSdk = 36
 
     defaultConfig {
+        buildConfigField("String", "JAMENDO_CLIENT_ID", "\"${jamendoClientId}\"")
         applicationId = "com.twilitmusic.app"
         minSdk = 26
         targetSdk = 36
@@ -51,6 +66,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.8"

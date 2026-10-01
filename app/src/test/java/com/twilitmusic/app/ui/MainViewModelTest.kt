@@ -40,8 +40,8 @@ class MainViewModelTest {
         libraryRepository = mock()
         queueDao = mock()
         
-        whenever(mockMusicSource.getFeaturedTracks()).thenReturn(emptyList())
-        whenever(mockMusicSource.getNewTracks()).thenReturn(emptyList())
+        whenever(mockMusicSource.getFeaturedTracks()).thenReturn(Result.success(emptyList()))
+        whenever(mockMusicSource.getNewTracks()).thenReturn(Result.success(emptyList()))
         
         val prefs = mock<android.content.SharedPreferences>()
         whenever(application.getSharedPreferences(org.mockito.kotlin.any(), org.mockito.kotlin.any())).thenReturn(prefs)
@@ -55,7 +55,7 @@ class MainViewModelTest {
         whenever(queueDao.getQueue()).thenReturn(emptyList())
         whenever(queueDao.getPlaybackState()).thenReturn(null)
         
-        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, libraryRepository, queueDao)
+        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, org.mockito.Mockito.mock(android.content.Context::class.java), org.mockito.Mockito.mock(androidx.media3.exoplayer.offline.DownloadManager::class.java), libraryRepository, queueDao)
     }
 
     @After
@@ -66,11 +66,11 @@ class MainViewModelTest {
     @Test
     fun loadHomeData_updatesUiState() = runTest(testDispatcher) {
         val tracks = listOf(Track("1", "A", "B", "C", "D"))
-        whenever(mockMusicSource.getFeaturedTracks()).thenReturn(tracks)
-        whenever(mockMusicSource.getNewTracks()).thenReturn(tracks)
+        whenever(mockMusicSource.getFeaturedTracks()).thenReturn(Result.success(tracks))
+        whenever(mockMusicSource.getNewTracks()).thenReturn(Result.success(tracks))
 
         // Initialize view model
-        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, libraryRepository, queueDao)
+        viewModel = MainViewModel(application, mockMusicSource, mockMusicController, org.mockito.Mockito.mock(android.content.Context::class.java), org.mockito.Mockito.mock(androidx.media3.exoplayer.offline.DownloadManager::class.java), libraryRepository, queueDao)
         testDispatcher.scheduler.advanceUntilIdle()
 
         val state = viewModel.uiState.value

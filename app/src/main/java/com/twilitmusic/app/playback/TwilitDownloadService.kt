@@ -5,8 +5,11 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadManager
 import androidx.media3.exoplayer.offline.DownloadService
 import com.twilitmusic.app.R
-import java.util.concurrent.Executor
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
+@androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 class TwilitDownloadService : DownloadService(
     1,
     DEFAULT_FOREGROUND_NOTIFICATION_UPDATE_INTERVAL,
@@ -14,24 +17,11 @@ class TwilitDownloadService : DownloadService(
     R.string.app_name,
     0
 ) {
-    override fun getDownloadManager(): DownloadManager {
-        val databaseProvider = androidx.media3.database.StandaloneDatabaseProvider(this)
-        val downloadCache = CacheManager.getInstance(this)
-        val dataSourceFactory = androidx.media3.datasource.DefaultDataSource.Factory(this)
-        val executor = Executor { it.run() }
-        
-        return DownloadManager(
-            this,
-            databaseProvider,
-            downloadCache,
-            dataSourceFactory,
-            executor
-        )
-    }
+    @Inject lateinit var injectedDownloadManager: DownloadManager
 
-    override fun getScheduler(): androidx.media3.exoplayer.scheduler.Scheduler? {
-        return null // No scheduler for now
-    }
+    override fun getDownloadManager(): DownloadManager = injectedDownloadManager
+
+    override fun getScheduler(): androidx.media3.exoplayer.scheduler.Scheduler? = null
 
     override fun getForegroundNotification(
         downloads: MutableList<Download>,

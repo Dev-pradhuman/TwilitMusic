@@ -18,23 +18,31 @@ class DemoMusicSource @Inject constructor() : MusicSource {
         )
     }
 
-    override suspend fun search(query: String): List<Track> {
-        return tracks.filter { it.title.contains(query, ignoreCase = true) }
+    override suspend fun search(query: String): Result<List<Track>> = runCatching {
+        tracks.filter { it.title.contains(query, ignoreCase = true) || it.artist.contains(query, ignoreCase = true) }
     }
 
-    override suspend fun getTrack(id: String): Track? {
-        return tracks.find { it.id == id }
+    override suspend fun getTrack(id: String): Result<Track?> = runCatching {
+        tracks.find { it.id == id }
     }
 
-    override suspend fun getStreamUrl(id: String): String? {
-        return getTrack(id)?.sourceUrl
+    override suspend fun getStreamUrl(id: String): Result<String?> = runCatching {
+        getTrack(id).getOrNull()?.sourceUrl
     }
 
-    override suspend fun getFeaturedTracks(): List<Track> {
-        return tracks.take(10)
+    override suspend fun getFeaturedTracks(): Result<List<Track>> = runCatching {
+        tracks.take(5)
     }
 
-    override suspend fun getNewTracks(): List<Track> {
-        return tracks.drop(10)
+    override suspend fun getNewTracks(): Result<List<Track>> = runCatching {
+        tracks.drop(5).take(5)
+    }
+
+    override suspend fun getAlbum(albumId: String): Result<List<Track>> = runCatching {
+        tracks.filter { it.title.contains(albumId, true) }
+    }
+
+    override suspend fun getArtist(artistId: String): Result<List<Track>> = runCatching {
+        tracks.filter { it.artist.contains(artistId, true) }
     }
 }

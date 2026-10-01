@@ -89,7 +89,7 @@ class JamendoMusicSourceTest {
 
         mockWebServer.enqueue(MockResponse().setBody(mockResponse).setResponseCode(200))
 
-        val results = source.search("Test")
+        val results = source.search("Test").getOrThrow()
         assertEquals(1, results.size)
         assertEquals("Test Track", results[0].title)
         assertEquals("http://example.com/audio.mp3", results[0].sourceUrl)

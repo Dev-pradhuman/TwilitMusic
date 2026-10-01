@@ -137,30 +137,7 @@ fun HomeScreen(
     }
 }
 
-@Composable
-fun TrackItem(track: Track, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(16.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        AsyncImage(
-            model = track.artUrl,
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .size(48.dp)
-                .clip(MaterialTheme.shapes.small)
-        )
-        Spacer(modifier = Modifier.width(16.dp))
-        Column {
-            Text(track.title, style = MaterialTheme.typography.bodyLarge)
-            Text(track.artist, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
-    }
-}
+
 
 @Composable
 fun MiniPlayer(

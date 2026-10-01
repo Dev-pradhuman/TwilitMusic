@@ -1,9 +1,19 @@
 package com.twilitmusic.app.ui
 
 import androidx.lifecycle.ViewModel
-import android.app.Application
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.net.NetworkRequest
+import androidx.media3.exoplayer.offline.DownloadRequest
+import androidx.media3.exoplayer.offline.DownloadService
+import com.twilitmusic.app.playback.TwilitDownloadService
 import android.content.Context
+import android.net.Uri
+import dagger.hilt.android.qualifiers.ApplicationContext
 import androidx.media3.common.MediaItem
+import androidx.media3.exoplayer.offline.DownloadManager
+import android.app.Application
 import com.twilitmusic.app.data.local.dao.QueueDao
 import com.twilitmusic.app.domain.repository.LibraryRepository
 import kotlinx.coroutines.flow.flatMapLatest
@@ -30,10 +40,13 @@ data class MainUiState(
 )
 
 @HiltViewModel
+@androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 class MainViewModel @Inject constructor(
     private val application: Application,
     private val musicSource: MusicSource,
     val musicController: MusicController,
+    @ApplicationContext private val context: Context,
+    private val downloadManager: DownloadManager,
     private val libraryRepository: LibraryRepository,
     private val queueDao: QueueDao
 ) : ViewModel() {
@@ -53,7 +66,17 @@ class MainViewModel @Inject constructor(
         }
     }
 
+
+    val isOffline = MutableStateFlow(false)
+
     init {
+        val connectivityManager = application.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+        val networkCallback = object : ConnectivityManager.NetworkCallback() {
+            override fun onAvailable(network: Network) { isOffline.value = false }
+            override fun onLost(network: Network) { isOffline.value = true }
+        }
+        connectivityManager?.registerDefaultNetworkCallback(networkCallback)
+        
         viewModelScope.launch {
             musicController.init()
             loadHomeData()
@@ -62,8 +85,8 @@ class MainViewModel @Inject constructor(
 
     private suspend fun loadHomeData() {
         _uiState.update { it.copy(isLoading = true) }
-        val featured = musicSource.getFeaturedTracks()
-        val new = musicSource.getNewTracks()
+        val featured = musicSource.getFeaturedTracks().getOrDefault(emptyList())
+        val new = musicSource.getNewTracks().getOrDefault(emptyList())
         _uiState.update { 
             it.copy(
                 featuredTracks = featured,
@@ -72,6 +95,17 @@ class MainViewModel @Inject constructor(
             )
         }
     }
+
+    
+    fun downloadTrack(track: Track) {
+        if (track.sourceUrl.isEmpty()) return
+        val downloadRequest = DownloadRequest.Builder(track.id, Uri.parse(track.sourceUrl)).build()
+        DownloadService.sendAddDownload(context, TwilitDownloadService::class.java, downloadRequest, false)
+    }
+
+    val downloadedTrackIds = MutableStateFlow<Set<String>>(emptySet())
+    
+    // In a real app we would observe downloadManager.addListener, but for now we poll or rely on UI updates
 
     fun playTrack(track: Track) {
         musicController.playQueue(listOf(track))

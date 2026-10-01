@@ -70,10 +70,10 @@ class MainViewModelExtendedTest {
         whenever(libraryRepository.isLiked(any())).thenReturn(MutableStateFlow(false))
         whenever(queueDao.getQueue()).thenReturn(emptyList())
         whenever(queueDao.getPlaybackState()).thenReturn(null)
-        whenever(musicSource.getFeaturedTracks()).thenReturn(emptyList())
-        whenever(musicSource.getNewTracks()).thenReturn(emptyList())
+        whenever(musicSource.getFeaturedTracks()).thenReturn(Result.success(emptyList()))
+        whenever(musicSource.getNewTracks()).thenReturn(Result.success(emptyList()))
         
-        viewModel = MainViewModel(application, musicSource, musicController, libraryRepository, queueDao)
+        viewModel = MainViewModel(application, musicSource, musicController, org.mockito.Mockito.mock(android.content.Context::class.java), org.mockito.Mockito.mock(androidx.media3.exoplayer.offline.DownloadManager::class.java), libraryRepository, queueDao)
     }
 
     @After
