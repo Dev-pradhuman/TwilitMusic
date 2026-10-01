@@ -80,6 +80,9 @@ dependencies {
     
     // Media3
     implementation(libs.media3.exoplayer)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
     implementation(libs.media3.session)
     implementation(libs.media3.ui)
     implementation(libs.media3.common)
@@ -101,6 +104,7 @@ dependencies {
     implementation(libs.coroutines.guava)
 
     testImplementation(libs.junit)
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
     testImplementation("org.robolectric:robolectric:4.11.1")
     testImplementation("androidx.test:core:1.5.0")
     testImplementation("androidx.room:room-testing:2.6.1")
