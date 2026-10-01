@@ -41,6 +41,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             
             implementation(libs.coroutines.core)
+            implementation(libs.kotlinx.datetime)
             implementation(libs.navigation.compose)
             implementation(libs.lifecycle.viewmodel.compose)
             implementation(libs.reorderable)
@@ -105,7 +106,6 @@ android {
 }
 
 dependencies {
-    add("kspCommonMainMetadata", libs.room.compiler)
     add("kspAndroid", libs.room.compiler)
     add("kspDesktop", libs.room.compiler)
     add("kspIosX64", libs.room.compiler)

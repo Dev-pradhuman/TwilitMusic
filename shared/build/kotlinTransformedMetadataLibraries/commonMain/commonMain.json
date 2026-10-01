@@ -50,6 +50,11 @@
     "sourceSetName": "commonMain"
   },
   {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-datetime:0.6.0",
+    "file": "/home/pradhuman/projects/twilitmusic/shared/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.kotlinx-kotlinx-datetime-0.6.0-commonMain-v1Leig.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
     "moduleId": "module org.jetbrains.androidx.navigation:navigation-compose:2.8.0-alpha10",
     "file": "/home/pradhuman/projects/twilitmusic/shared/build/kotlinTransformedMetadataLibraries/commonMain/org.jetbrains.androidx.navigation-navigation-compose-2.8.0-alpha10-commonMain-x_0rGg.klib",
     "sourceSetName": "commonMain"
