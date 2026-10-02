@@ -82,10 +82,11 @@ kotlin {
             implementation(libs.media3.session)
         }
         
-        val desktopMain by getting {
+                val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
                 implementation(libs.ktor.client.cio)
+                implementation("uk.co.caprica:vlcj:4.8.2")
             }
         }
         

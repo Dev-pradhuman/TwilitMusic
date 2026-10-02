@@ -8,21 +8,25 @@ import com.twilitmusic.app.data.local.TwilitDatabase
 import java.io.File
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import kotlinx.coroutines.Dispatchers
+import com.twilitmusic.app.playback.AudioPlayer
+import com.twilitmusic.app.playback.DesktopAudioPlayer
+import com.twilitmusic.app.domain.ConnectivityMonitor
+import com.twilitmusic.app.domain.DesktopConnectivityMonitor
+import com.twilitmusic.app.domain.TwilitDownloadManager
+import com.twilitmusic.app.domain.PlatformPaths
+import com.twilitmusic.app.domain.DesktopPlatformPaths
+import com.twilitmusic.app.domain.DesktopDownloadManager
 
 actual val platformModule = module {
     single { CIO.create() }
+    single<PlatformPaths> { DesktopPlatformPaths() }
     single<RoomDatabase.Builder<TwilitDatabase>> {
-        val os = System.getProperty("os.name").lowercase()
-        val userHome = System.getProperty("user.home")
-        val appDataDir = when {
-            os.contains("win") -> File(System.getenv("APPDATA"), "TwilitMusic")
-            os.contains("mac") -> File(userHome, "Library/Application Support/TwilitMusic")
-            else -> File(System.getenv("XDG_DATA_HOME") ?: "$userHome/.local/share", "TwilitMusic")
-        }
-        if (!appDataDir.exists()) appDataDir.mkdirs()
-        val dbFile = File(appDataDir, "twilit_music.db")
+        val paths = get<PlatformPaths>()
         Room.databaseBuilder<TwilitDatabase>(
-            name = dbFile.absolutePath
+            name = paths.databasePath
         ).setDriver(BundledSQLiteDriver())
     }
+    single<AudioPlayer> { DesktopAudioPlayer() }
+    single<ConnectivityMonitor> { DesktopConnectivityMonitor() }
+    single<TwilitDownloadManager> { DesktopDownloadManager() }
 }

@@ -11,21 +11,26 @@ import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import kotlinx.coroutines.Dispatchers
+import com.twilitmusic.app.playback.AudioPlayer
+import com.twilitmusic.app.playback.IosAudioPlayer
+import com.twilitmusic.app.domain.ConnectivityMonitor
+import com.twilitmusic.app.domain.IosConnectivityMonitor
+import com.twilitmusic.app.domain.TwilitDownloadManager
+import com.twilitmusic.app.domain.PlatformPaths
+import com.twilitmusic.app.domain.IosPlatformPaths
+import com.twilitmusic.app.domain.IosDownloadManager
 
 @OptIn(ExperimentalForeignApi::class)
 actual val platformModule = module {
     single { Darwin.create() }
+    single<PlatformPaths> { IosPlatformPaths() }
     single<RoomDatabase.Builder<TwilitDatabase>> {
-        val documentDirectory = NSFileManager.defaultManager.URLForDirectory(
-            directory = NSDocumentDirectory,
-            inDomain = NSUserDomainMask,
-            appropriateForURL = null,
-            create = false,
-            error = null,
-        )
-        val dbPath = documentDirectory?.path + "/twilit_music.db"
+        val paths = get<PlatformPaths>()
         Room.databaseBuilder<TwilitDatabase>(
-            name = dbPath
+            name = paths.databasePath
         ).setDriver(BundledSQLiteDriver())
     }
+    single<AudioPlayer> { IosAudioPlayer() }
+    single<ConnectivityMonitor> { IosConnectivityMonitor() }
+    single<TwilitDownloadManager> { IosDownloadManager() }
 }
