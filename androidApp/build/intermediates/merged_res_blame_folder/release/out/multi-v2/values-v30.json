@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.twilitmusic.app.androidApp-mergeReleaseResources-67:/values-v30/values-v30.xml",
+            "map": [
+                {
+                    "source": "/home/pradhuman/.gradle/caches/transforms-4/ef7925313ea31d856b9d3702e6f1c3aa/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "72",
+                        "endOffsets": "123"
+                    }
+                }
+            ]
+        }
+    ]
+}

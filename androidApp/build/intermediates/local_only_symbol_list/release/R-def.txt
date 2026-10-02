@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string close
+string drag
+string featured
+string home
+string library
+string library_placeholder
+string new_tracks
+string next
+string now_playing
+string pause
+string play
+string play_pause
+string previous
+string queue
+string remove
+string repeat
+string search
+string search_placeholder
+string shuffle
+style Theme.TwilitMusic

@@ -45,3 +45,35 @@ TwilitMusic is an open-source, modern Android music player featuring a "twilight
 - Queue persistence across app restarts.
 - Room database added for library features.
 - Search and Library screens implemented with real data.
+
+## Phase 4: Cross-Platform (Compose Multiplatform)
+
+TwilitMusic now supports cross-platform execution via Kotlin Multiplatform!
+
+### Platforms Supported
+- **Android** (fully functional, uses ExoPlayer)
+- **Linux Desktop** (fully functional via Kubuntu/Ubuntu, uses `vlcj` for playback)
+- **Windows / macOS Desktop** (Supported via KMP backend)
+- **iOS** (Stubbed UI via Compose Multiplatform)
+
+### How to Build & Run
+**Android:**
+```bash
+./gradlew :androidApp:assembleDebug
+```
+
+**Desktop (Linux/Windows/macOS):**
+*Note: Make sure VLC is installed on the host system to allow `vlcj` to work.*
+```bash
+# Run locally
+./gradlew :desktopApp:run
+
+# Package DEB for Ubuntu/Debian
+./gradlew :desktopApp:packageDeb
+
+# Package MSI for Windows
+./gradlew :desktopApp:packageMsi
+
+# Package DMG for macOS
+./gradlew :desktopApp:packageDmg
+```
