@@ -72,6 +72,9 @@ kotlin {
         }
         
         androidMain.dependencies {
+            implementation(libs.media3.exoplayer)
+            implementation(libs.media3.session)
+            implementation(libs.media3.common)
             implementation(libs.coroutines.android)
             implementation(libs.ktor.client.android)
             implementation(libs.koin.android)

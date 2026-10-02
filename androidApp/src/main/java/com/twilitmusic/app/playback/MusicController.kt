@@ -12,51 +12,48 @@ import com.twilitmusic.app.domain.repository.LibraryRepository
 import com.twilitmusic.app.data.local.dao.QueueDao
 import com.twilitmusic.app.data.local.entity.QueueTrackEntity
 import com.twilitmusic.app.data.local.entity.PlaybackStateEntity
-import dagger.hilt.android.qualifiers.ApplicationContext
+import com.twilitmusic.app.playback.AudioPlayer
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.guava.await
-import javax.inject.Inject
-import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.delay
 
-@Singleton
-class MusicController @Inject constructor(
-    @ApplicationContext private val context: Context,
+class MusicController (
+    private val context: Context,
     private val libraryRepository: LibraryRepository,
     private val queueDao: QueueDao
-) {
+) : AudioPlayer {
     internal var mediaController: MediaController? = null
     
     private val _isPlaying = MutableStateFlow(false)
-    val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
+    override val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
     
     private val _currentTrack = MutableStateFlow<Track?>(null)
-    val currentTrack: StateFlow<Track?> = _currentTrack.asStateFlow()
+    override val currentTrack: StateFlow<Track?> = _currentTrack.asStateFlow()
     
     private val _queue = MutableStateFlow<List<Track>>(emptyList())
-    val queue: StateFlow<List<Track>> = _queue.asStateFlow()
+    override val queue: StateFlow<List<Track>> = _queue.asStateFlow()
 
     private val _position = MutableStateFlow(0L)
-    val position: StateFlow<Long> = _position.asStateFlow()
+    override val currentPosition: StateFlow<Long> = _position.asStateFlow()
 
     private val _duration = MutableStateFlow(0L)
-    val duration: StateFlow<Long> = _duration.asStateFlow()
+    override val duration: StateFlow<Long> = _duration.asStateFlow()
 
     private val _bufferedPosition = MutableStateFlow(0L)
     val bufferedPosition: StateFlow<Long> = _bufferedPosition.asStateFlow()
 
     private val _shuffleModeEnabled = MutableStateFlow(false)
-    val shuffleModeEnabled: StateFlow<Boolean> = _shuffleModeEnabled.asStateFlow()
+    override val shuffleModeEnabled: StateFlow<Boolean> = _shuffleModeEnabled.asStateFlow()
 
     private val _repeatMode = MutableStateFlow(Player.REPEAT_MODE_OFF)
-    val repeatMode: StateFlow<Int> = _repeatMode.asStateFlow()
+    override val repeatMode: StateFlow<Int> = _repeatMode.asStateFlow()
 
-    suspend fun init() {
+    override suspend fun init() {
         if (mediaController != null) return
         val sessionToken = SessionToken(context, ComponentName(context, MusicService::class.java))
         mediaController = MediaController.Builder(context, sessionToken).buildAsync().await()
@@ -162,7 +159,7 @@ class MusicController @Inject constructor(
         controller.play()
     }
     
-    fun playQueue(tracks: List<Track>, startIndex: Int = 0) {
+    override fun playQueue(tracks: List<Track>, startIndex: Int) {
         val controller = mediaController ?: return
         val items = tracks.map { track ->
             MediaItem.Builder()
@@ -202,7 +199,7 @@ class MusicController @Inject constructor(
         // Do not play automatically
     }
     
-    fun playPause() {
+    override fun playPause() {
         val controller = mediaController ?: return
         if (controller.isPlaying) {
             controller.pause()
@@ -211,23 +208,23 @@ class MusicController @Inject constructor(
         }
     }
     
-    fun skipToNext() {
+    override fun skipToNext() {
         mediaController?.seekToNext()
     }
     
-    fun skipToPrevious() {
+    override fun skipToPrevious() {
         mediaController?.seekToPrevious()
     }
     
-    fun removeTrack(index: Int) {
+    override fun removeTrack(index: Int) {
         mediaController?.removeMediaItem(index)
     }
     
-    fun moveTrack(fromIndex: Int, toIndex: Int) {
-        mediaController?.moveMediaItem(fromIndex, toIndex)
+    override fun moveTrack(from: Int, to: Int) {
+        mediaController?.moveMediaItem(from, to)
     }
 
-    fun seekTo(positionMs: Long) {
+    override fun seekTo(positionMs: Long) {
         mediaController?.seekTo(positionMs)
     }
 
@@ -235,6 +232,9 @@ class MusicController @Inject constructor(
         val controller = mediaController ?: return
         controller.shuffleModeEnabled = !controller.shuffleModeEnabled
     }
+
+    override fun setRepeatMode(mode: Int) { mediaController?.repeatMode = mode }
+    override fun setShuffleModeEnabled(enabled: Boolean) { mediaController?.shuffleModeEnabled = enabled }
 
     fun cycleRepeatMode() {
         val controller = mediaController ?: return
