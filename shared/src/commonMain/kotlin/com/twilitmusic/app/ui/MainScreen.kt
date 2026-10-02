@@ -1,4 +1,9 @@
 package com.twilitmusic.app.ui
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.foundation.focusable
+import androidx.compose.ui.input.key.*
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.runtime.collectAsState
 
 import androidx.compose.animation.AnimatedVisibility
@@ -45,43 +50,117 @@ fun TwilitAppScreen(
     
     var showNowPlaying by remember { mutableStateOf(false) }
 
-    Scaffold(
-        bottomBar = {
-            Column {
-                if (currentTrack != null) {
-                    MiniPlayer(
-                        track = currentTrack!!,
-                        isPlaying = isPlaying,
-                        progress = if (duration > 0) position.toFloat() / duration.toFloat() else 0f,
-                        onPlayPause = viewModel::playPause,
-                        onClick = { showNowPlaying = true }
-                    )
-                }
-                NavigationBar {
-                    NavigationBarItem(
+        val focusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) { focusRequester.requestFocus() }
+    BoxWithConstraints(
+        modifier = Modifier
+            .fillMaxSize()
+            .focusRequester(focusRequester)
+            .focusable()
+            .onKeyEvent { event ->
+                if (event.type == KeyEventType.KeyUp) {
+                    when (event.key) {
+                        Key.Spacebar -> { viewModel.playPause(); true }
+                        Key.DirectionRight -> { viewModel.skipToNext(); true }
+                        Key.DirectionLeft -> { viewModel.skipToPrevious(); true }
+                        else -> false
+                    }
+                } else false
+            }
+    ) {
+        val isWideScreen = maxWidth > 600.dp
+
+        if (isWideScreen) {
+            Row(modifier = Modifier.fillMaxSize()) {
+                NavigationRail(
+                    header = {
+                        // Optional logo
+                    }
+                ) {
+                    NavigationRailItem(
                         selected = currentTab == 0,
                         onClick = { currentTab = 0; navController.navigate(HomeRoute) { popUpTo(navController.graph.findStartDestination().route!!) { saveState = true }; launchSingleTop = true; restoreState = true } },
                         icon = { Icon(Icons.Default.Home, contentDescription = "") },
-                        label = { Text("") }
+                        label = { Text("Home") }
                     )
-                    NavigationBarItem(
+                    NavigationRailItem(
                         selected = currentTab == 1,
                         onClick = { currentTab = 1; navController.navigate(SearchRoute) { popUpTo(navController.graph.findStartDestination().route!!) { saveState = true }; launchSingleTop = true; restoreState = true } },
                         icon = { Icon(Icons.Default.Search, contentDescription = "") },
-                        label = { Text("") }
+                        label = { Text("Search") }
                     )
-                    NavigationBarItem(
+                    NavigationRailItem(
                         selected = currentTab == 2,
                         onClick = { currentTab = 2; navController.navigate(LibraryRoute) { popUpTo(navController.graph.findStartDestination().route!!) { saveState = true }; launchSingleTop = true; restoreState = true } },
                         icon = { Icon(Icons.Default.LibraryMusic, contentDescription = "") },
-                        label = { Text("") }
+                        label = { Text("Library") }
                     )
+                    Spacer(modifier = Modifier.weight(1f))
+                    if (currentTrack != null) {
+                        IconButton(onClick = { showNowPlaying = true }) {
+                            Icon(Icons.Default.LibraryMusic, contentDescription = "Now Playing")
+                        }
+                    }
+                }
+                
+                Scaffold(
+                    bottomBar = {
+                        if (currentTrack != null) {
+                            MiniPlayer(
+                                track = currentTrack!!,
+                                isPlaying = isPlaying,
+                                progress = if (duration > 0) position.toFloat() / duration.toFloat() else 0f,
+                                onPlayPause = viewModel::playPause,
+                                onClick = { showNowPlaying = true }
+                            )
+                        }
+                    }
+                ) { paddingValues ->
+                    Box(modifier = Modifier.padding(paddingValues)) {
+                        AppNavHost(navController = navController, viewModel = viewModel)
+                    }
                 }
             }
-        }
-    ) { paddingValues ->
-        Box(modifier = Modifier.padding(paddingValues)) {
-            AppNavHost(navController = navController, viewModel = viewModel)
+        } else {
+            Scaffold(
+                bottomBar = {
+                    Column {
+                        if (currentTrack != null) {
+                            MiniPlayer(
+                                track = currentTrack!!,
+                                isPlaying = isPlaying,
+                                progress = if (duration > 0) position.toFloat() / duration.toFloat() else 0f,
+                                onPlayPause = viewModel::playPause,
+                                onClick = { showNowPlaying = true }
+                            )
+                        }
+                        NavigationBar {
+                            NavigationBarItem(
+                                selected = currentTab == 0,
+                                onClick = { currentTab = 0; navController.navigate(HomeRoute) { popUpTo(navController.graph.findStartDestination().route!!) { saveState = true }; launchSingleTop = true; restoreState = true } },
+                                icon = { Icon(Icons.Default.Home, contentDescription = "") },
+                                label = { Text("Home") }
+                            )
+                            NavigationBarItem(
+                                selected = currentTab == 1,
+                                onClick = { currentTab = 1; navController.navigate(SearchRoute) { popUpTo(navController.graph.findStartDestination().route!!) { saveState = true }; launchSingleTop = true; restoreState = true } },
+                                icon = { Icon(Icons.Default.Search, contentDescription = "") },
+                                label = { Text("Search") }
+                            )
+                            NavigationBarItem(
+                                selected = currentTab == 2,
+                                onClick = { currentTab = 2; navController.navigate(LibraryRoute) { popUpTo(navController.graph.findStartDestination().route!!) { saveState = true }; launchSingleTop = true; restoreState = true } },
+                                icon = { Icon(Icons.Default.LibraryMusic, contentDescription = "") },
+                                label = { Text("Library") }
+                            )
+                        }
+                    }
+                }
+            ) { paddingValues ->
+                Box(modifier = Modifier.padding(paddingValues)) {
+                    AppNavHost(navController = navController, viewModel = viewModel)
+                }
+            }
         }
     }
     

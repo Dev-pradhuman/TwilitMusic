@@ -8,7 +8,7 @@ class JamendoMusicSource (
     private val api: JamendoApi
 ) : MusicSource {
 
-    private val clientId = "655938da"
+    private val clientId = com.twilitmusic.app.domain.Config.jamendoClientId
 
     override suspend fun search(query: String): Result<List<Track>> = runCatching {
         val response = api.getTracks(clientId = clientId, search = query)
