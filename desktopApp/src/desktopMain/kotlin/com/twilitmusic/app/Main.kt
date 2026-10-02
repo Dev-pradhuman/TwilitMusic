@@ -2,6 +2,9 @@ package com.twilitmusic.app
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import androidx.compose.ui.window.rememberWindowState
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.DpSize
 import com.twilitmusic.app.ui.TwilitAppScreen
 import com.twilitmusic.app.ui.theme.TwilitMusicTheme
 import com.twilitmusic.app.di.initKoin
@@ -27,10 +30,14 @@ fun main() {
     initKoin()
 
     application {
+        val state = rememberWindowState(size = DpSize(1024.dp, 768.dp))
         Window(
             onCloseRequest = ::exitApplication,
-            title = "TwilitMusic"
+            title = "TwilitMusic",
+            state = state
+            // icon = painterResource("icon.png") // We would add an icon here if we had one
         ) {
+            window.minimumSize = java.awt.Dimension(800, 600)
             TwilitMusicTheme {
                 TwilitAppScreen()
             }

@@ -59,10 +59,11 @@ fun TwilitAppScreen(
             .focusable()
             .onKeyEvent { event ->
                 if (event.type == KeyEventType.KeyUp) {
-                    when (event.key) {
-                        Key.Spacebar -> { viewModel.playPause(); true }
-                        Key.DirectionRight -> { viewModel.skipToNext(); true }
-                        Key.DirectionLeft -> { viewModel.skipToPrevious(); true }
+                    when {
+                        event.key == Key.Spacebar && !event.isCtrlPressed -> { viewModel.playPause(); true }
+                        event.key == Key.DirectionRight && event.isCtrlPressed -> { viewModel.skipToNext(); true }
+                        event.key == Key.DirectionLeft && event.isCtrlPressed -> { viewModel.skipToPrevious(); true }
+                        event.key == Key.F && event.isCtrlPressed -> { currentTab = 1; navController.navigate("search") { launchSingleTop = true }; true }
                         else -> false
                     }
                 } else false
